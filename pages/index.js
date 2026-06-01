@@ -1,20 +1,36 @@
 import Head from 'next/head';
-import Hero from '../components/Hero';
-import Features from '../components/Features';
-import CallToAction from '../components/CallToAction';
+import Header from '../components/Header';
+import ComparisonHero from '../components/ComparisonHero';
+import QuickFilters from '../components/QuickFilters';
+import TopProducts from '../components/TopProducts';
+import HowItWorks from '../components/HowItWorks';
+import ComplianceChecker from '../components/ComplianceChecker';
+import SavingsDashboard from '../components/SavingsDashboard';
+import BestDeals from '../components/BestDeals';
+import Guides from '../components/Guides';
 import Testimonials from '../components/Testimonials';
+import FinalCTA from '../components/FinalCTA';
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>PluginDirect | UK's Independent Plug-In Solar Marketplace</title>
-        <meta name="description" content="Compare every major UK plug-in solar system, calculate your savings, and complete your DNO registration—all in one place." />
+        <title>Compare Plug-In Solar Kits in the UK | PluginDirect</title>
+        <meta name="description" content="Find the cheapest, safest, and regulation-approved solar kits under 800W. No electrician required." />
       </Head>
-      <Hero />
-      <Features />
-      <Testimonials />
-      <CallToAction />
+      <Header />
+      <main>
+        <ComparisonHero />
+        <QuickFilters />
+        <TopProducts />
+        <HowItWorks />
+        <ComplianceChecker />
+        <SavingsDashboard />
+        <BestDeals />
+        <Guides />
+        <Testimonials />
+        <FinalCTA />
+      </main>
     </>
   );
 }

@@ -1,89 +1,100 @@
 export default function Testimonials() {
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      location: 'London',
-      text: 'PluginDirect made comparing solar kits so easy. I saved £400 in year one!',
-      rating: 5,
-    },
-    {
-      name: 'Mike Chen',
-      location: 'Manchester',
-      text: 'The DNO registration wizard saved me hours. Brilliant service.',
-      rating: 5,
-    },
-    {
-      name: 'Emma Wilson',
-      location: 'Bristol',
-      text: 'Finally an unbiased comparison tool. Highly recommended!',
-      rating: 5,
-    },
-  ];
-
   return (
     <section className="testimonials">
-      <div className="testimonials-content">
-        <h2>Loved by UK Homeowners</h2>
-        <div className="testimonials-grid">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="testimonial-card">
-              <div className="stars">{'⭐'.repeat(testimonial.rating)}</div>
-              <p className="text">"<strong>{testimonial.text}</strong>"</p>
-              <p className="author">{testimonial.name}, {testimonial.location}</p>
+      <div className="content">
+        <div className="left">
+          <h2>We compare trusted UK suppliers<br />so you don't have to.</h2>
+          
+          <div className="rating-box">
+            <div className="stars">⭐⭐⭐⭐⭐</div>
+            <p>4.8 out of 5 on 1250+ reviews</p>
+            <p className="site">Trustpilot</p>
+          </div>
+        </div>
+        
+        <div className="right">
+          <div className="testimonial">
+            <p>"The platform makes it so easy to compare kits and get the best advice of consumers. Got me all informed and sorted - brilliant!"</p>
+            <div className="author">
+              <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="John" />
+              <div>
+                <p className="name">John B.</p>
+                <p className="location">Bristol</p>
+              </div>
             </div>
-          ))}
+          </div>
         </div>
       </div>
+      
       <style jsx>{`
         .testimonials {
-          padding: 70px 8%;
-          background: #f8fafc;
-          max-width: 1400px;
+          padding: 60px 8%;
+          background: white;
+          max-width: 1600px;
           margin: 0 auto;
         }
-        .testimonials-content {
-          text-align: center;
+        .content {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 60px;
+          align-items: center;
         }
         h2 {
-          font-size: 42px;
+          font-size: 28px;
           color: #0f2444;
-          margin-bottom: 50px;
+          margin: 0 0 40px;
+          line-height: 1.4;
+          font-weight: 700;
         }
-        .testimonials-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 30px;
-        }
-        .testimonial-card {
-          background: white;
-          padding: 30px;
+        .rating-box {
+          background: #f8fafc;
+          padding: 20px;
           border-radius: 12px;
-          box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
         .stars {
           font-size: 20px;
-          margin-bottom: 15px;
+          margin-bottom: 10px;
         }
-        .text {
-          font-size: 16px;
-          color: #333;
-          line-height: 1.6;
-          margin: 15px 0;
+        .rating-box p {
+          margin: 8px 0;
+          font-size: 14px;
+          color: #666;
+        }
+        .site {
+          font-weight: 700 !important;
+          color: #0f2444 !important;
+        }
+        .testimonial {
+          background: white;
+          border: 2px solid #e5e7eb;
+          border-radius: 12px;
+          padding: 25px;
+        }
+        .testimonial p {
+          margin: 0 0 20px;
+          font-style: italic;
+          color: #666;
         }
         .author {
-          color: #666;
-          font-size: 14px;
+          display: flex;
+          gap: 12px;
+          align-items: center;
+        }
+        .author img {
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+        }
+        .name {
           margin: 0;
+          font-weight: 700;
+          color: #0f2444;
+          font-size: 14px;
         }
-        @media (max-width: 900px) {
-          .testimonials-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
-        }
-        @media (max-width: 600px) {
-          .testimonials-grid {
-            grid-template-columns: 1fr;
-          }
+        .location {
+          margin: 4px 0 0;
+          font-size: 12px;
+          color: #999;
         }
       `}</style>
     </section>
