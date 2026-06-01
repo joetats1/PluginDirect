@@ -35,10 +35,9 @@ export default function Header() {
         .header {
           background: white;
           border-bottom: 1px solid #e5e7eb;
-          sticky: top;
-          z-index: 100;
           position: sticky;
           top: 0;
+          z-index: 100;
         }
         .header-content {
           padding: 12px 8%;
@@ -130,6 +129,9 @@ export default function Header() {
           }
           .menu-toggle {
             display: block;
+          }
+          .header-actions {
+            display: none;
           }
         }
       `}</style>
