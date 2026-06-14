@@ -1,0 +1,2089 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PluginDirect — Compare Plug-In Solar Kits UK 2026</title>
+<meta name="description" content="Compare plug-in solar kits for UK homes. Calculate your savings, check compliance, and complete your DNO registration in minutes. Fully legal since April 2026.">
+<link rel="canonical" href="https://plugindirect.co.uk/">
+<meta property="og:title" content="PluginDirect — Compare Plug-In Solar Kits UK 2026">
+<meta property="og:description" content="The UK's first comparison site for plug-in solar. Calculate savings, compare kits, complete DNO registration.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://plugindirect.co.uk/">
+<meta name="theme-color" content="#0F2444">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "PluginDirect",
+  "url": "https://plugindirect.co.uk/",
+  "description": "UK's first plug-in solar comparison site"
+}
+</script>
+
+<style>
+/* ══════════════════════════════════════════════════════════
+   DESIGN SYSTEM — single source of truth, no legacy aliases
+   ══════════════════════════════════════════════════════════ */
+:root {
+  --ink:        #0F2444;
+  --ink-2:      #1A3354;
+  --ink-3:      #254878;
+  --mid:        #5A6E8A;
+  --muted:      #8E9EAF;
+  --border:     #DDE3EC;
+  --border-2:   #E8ECF2;
+  --surface:    #F5F7FA;
+  --white:      #FFFFFF;
+
+  --accent:     #E87B2D;
+  --accent-2:   #C5621A;
+  --accent-bg:  #FDF3EA;
+
+  --green:      #1A6B42;
+  --green-bg:   #EBF5EE;
+  --red:        #DC2626;
+  --red-bg:     #FEF2F2;
+
+  --font:       'DM Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  --font-d:     'Syne', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+
+  --section:    88px;
+  --max:        1160px;
+  --r:          6px;
+  --r-2:        12px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font);
+  background: var(--white);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+button { font-family: var(--font); cursor: pointer; }
+
+h1, h2, h3, h4 { font-family: var(--font-d); color: var(--ink); line-height: 1.15; letter-spacing: -.02em; }
+h1 { font-size: clamp(34px, 5vw, 58px); font-weight: 800; }
+h2 { font-size: clamp(24px, 3.5vw, 38px); font-weight: 800; }
+h3 { font-size: clamp(18px, 2.5vw, 24px); font-weight: 700; }
+
+.container { max-width: var(--max); margin: 0 auto; padding: 0 32px; }
+.section-tag { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; display: block; }
+.section-head { text-align: center; max-width: 640px; margin: 0 auto 48px; }
+.section-head p { color: var(--mid); font-size: 15px; margin-top: 8px; }
+
+@keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ══════════════════════════════════════════════════════════
+   NAV
+   ══════════════════════════════════════════════════════════ */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,.97); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; height: 64px;
+  padding: 0 32px;
+}
+.nav-inner { max-width: var(--max); margin: 0 auto; width: 100%; display: flex; align-items: center; justify-content: space-between; }
+.logo { display: flex; align-items: center; gap: 8px; font-family: var(--font-d); font-size: 17px; font-weight: 800; color: var(--ink); text-decoration: none; }
+.logo-mark { width: 22px; height: 22px; background: var(--accent); clip-path: polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%); flex-shrink: 0; }
+.logo-sub { font-size: 9px; font-weight: 400; color: var(--muted); font-family: var(--font); display: block; line-height: 1; margin-top: 2px; }
+.nav-links { display: flex; gap: 4px; list-style: none; }
+.nav-links a { font-size: 13px; font-weight: 500; color: var(--mid); text-decoration: none; padding: 10px 14px; border-radius: var(--r); transition: all .15s; }
+.nav-links a:hover { color: var(--ink); background: var(--surface); }
+.nav-right { display: flex; align-items: center; gap: 8px; }
+.nav-login { font-size: 13px; font-weight: 500; color: var(--mid); text-decoration: none; display: flex; align-items: center; gap: 5px; padding: 10px 12px; }
+.nav-cta { background: var(--accent); color: var(--white) !important; font-size: 13px; font-weight: 700; padding: 10px 20px; border-radius: var(--r); text-decoration: none; transition: background .15s; }
+.nav-cta:hover { background: var(--accent-2); }
+.hamburger { display: none; flex-direction: column; gap: 4px; background: none; border: none; padding: 8px; }
+.hamburger span { width: 22px; height: 2px; background: var(--ink); border-radius: 1px; }
+.mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; bottom: 0; background: var(--white); z-index: 99; padding: 24px 32px; flex-direction: column; gap: 4px; }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; padding: 14px 0; border-bottom: 1px solid var(--border-2); }
+.mob-cta { background: var(--accent); color: var(--white) !important; text-align: center; border-radius: var(--r); margin-top: 16px; border-bottom: none !important; }
+
+/* ══════════════════════════════════════════════════════════
+   HERO
+   ══════════════════════════════════════════════════════════ */
+.hero {
+  background: var(--ink);
+  position: relative; overflow: hidden;
+}
+.hero-grid {
+  max-width: var(--max); margin: 0 auto;
+  display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px;
+  align-items: center;
+  padding: 64px 32px 72px;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(26,107,66,.22); border: 1px solid rgba(110,231,160,.4);
+  color: #6EE7A0; font-size: 12px; font-weight: 600;
+  padding: 6px 14px; border-radius: 100px; margin-bottom: 18px;
+}
+.hero h1 { color: var(--white); margin-bottom: 6px; }
+.hero-sub { font-family: var(--font-d); font-size: clamp(18px,2.4vw,26px); font-weight: 700; color: var(--accent); display: block; margin-bottom: 16px; }
+.hero-desc { font-size: 16px; color: rgba(255,255,255,.65); line-height: 1.7; margin-bottom: 28px; max-width: 460px; font-weight: 300; }
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 28px; }
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 14px 28px; background: var(--accent); color: var(--white);
+  font-size: 15px; font-weight: 700; border-radius: var(--r);
+  text-decoration: none; border: none; transition: background .15s; cursor: pointer;
+}
+.btn-primary:hover { background: var(--accent-2); }
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 14px 24px; background: rgba(255,255,255,.08); color: var(--white);
+  font-size: 15px; font-weight: 600; border-radius: var(--r);
+  text-decoration: none; border: 1.5px solid rgba(255,255,255,.25);
+  transition: background .15s; cursor: pointer;
+}
+.btn-secondary:hover { background: rgba(255,255,255,.16); }
+.hero-trust { display: flex; gap: 22px; flex-wrap: wrap; margin-bottom: 24px; }
+.hero-trust span { font-size: 12px; color: rgba(255,255,255,.65); display: flex; align-items: center; gap: 6px; }
+.hero-proof { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.12); }
+.hero-proof span { font-size: 12px; color: rgba(255,255,255,.55); }
+.proof-dot { width: 3px; height: 3px; border-radius: 50%; background: rgba(255,255,255,.25); }
+
+/* Hero right column */
+.hero-right { display: flex; flex-direction: column; gap: 18px; }
+.hero-img-wrap { position: relative; border-radius: var(--r-2); overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,.35); }
+.hero-img-wrap img { width: 100%; height: 230px; object-fit: cover; display: block; }
+.hero-float-badge {
+  position: absolute; background: rgba(255,255,255,.97); backdrop-filter: blur(8px);
+  border-radius: var(--r); padding: 10px 14px; box-shadow: 0 6px 20px rgba(0,0,0,.18);
+}
+.hfb-bl { bottom: 14px; left: 14px; }
+.hfb-tr { top: 14px; right: 14px; display: flex; align-items: center; gap: 6px; }
+.hfb-num { font-family: var(--font-d); font-size: 20px; font-weight: 800; color: var(--accent); line-height: 1; }
+.hfb-label { font-size: 10px; color: var(--mid); margin-top: 1px; }
+.live-dot { width: 7px; height: 7px; border-radius: 50%; background: #22C55E; animation: blink 1.8s infinite; }
+
+/* Widget */
+.widget {
+  background: var(--white); border-radius: var(--r-2);
+  padding: 24px; box-shadow: 0 20px 50px rgba(0,0,0,.25);
+}
+.widget h3 { font-size: 16px; margin-bottom: 16px; }
+.w-label { font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 5px; }
+.w-field { margin-bottom: 12px; }
+.w-select {
+  width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: var(--r);
+  font-family: var(--font); font-size: 13px; color: var(--ink); background: var(--white);
+  outline: none; cursor: pointer; transition: border-color .15s;
+}
+.w-select:focus { border-color: var(--accent); }
+.w-submit {
+  width: 100%; padding: 12px; background: var(--accent); color: var(--white);
+  font-size: 14px; font-weight: 700; border: none; border-radius: var(--r);
+  cursor: pointer; transition: background .15s; margin-bottom: 14px;
+}
+.w-submit:hover { background: var(--accent-2); }
+.w-social { display: flex; align-items: center; gap: 10px; }
+.w-avatars { display: flex; }
+.w-av { width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--white); margin-left: -6px; overflow: hidden; flex-shrink: 0; background: var(--border); }
+.w-av:first-child { margin-left: 0; }
+.w-av img { width: 100%; height: 100%; object-fit: cover; }
+.w-social-text { font-size: 11px; color: var(--mid); line-height: 1.4; }
+
+/* ══════════════════════════════════════════════════════════
+   FEATURE STRIP
+   ══════════════════════════════════════════════════════════ */
+.feat-strip { display: flex; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+.feat {
+  flex: 1; min-width: 180px; padding: 22px 20px; border-right: 1px solid var(--border);
+  text-decoration: none; color: inherit; transition: background .15s;
+}
+.feat:last-child { border-right: none; }
+.feat:hover { background: var(--accent-bg); }
+.feat-icon { font-size: 22px; margin-bottom: 8px; }
+.feat-title { font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: 3px; }
+.feat-desc { font-size: 12px; color: var(--mid); margin-bottom: 8px; line-height: 1.4; }
+.feat-link { font-size: 12px; font-weight: 600; color: var(--accent); }
+
+/* ══════════════════════════════════════════════════════════
+   LEGAL BANNER
+   ══════════════════════════════════════════════════════════ */
+.legal-banner { background: var(--green-bg); border-bottom: 1px solid var(--border); padding: 18px 32px; }
+.legal-inner { max-width: var(--max); margin: 0 auto; display: flex; gap: 16px; align-items: flex-start; }
+.legal-icon { font-size: 24px; flex-shrink: 0; }
+.legal-content h4 { font-size: 14px; color: var(--green); margin-bottom: 4px; }
+.legal-content p { font-size: 13px; color: var(--mid); line-height: 1.6; }
+.legal-content a { color: var(--green); font-weight: 600; text-decoration: underline; }
+
+/* ══════════════════════════════════════════════════════════
+   GENERIC SECTION
+   ══════════════════════════════════════════════════════════ */
+.section { padding: var(--section) 32px; }
+.section.alt { background: var(--surface); }
+.section-flex-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 28px; }
+.section-flex-head h2 { margin: 0; }
+.see-all { font-size: 13px; font-weight: 600; color: var(--accent); text-decoration: none; white-space: nowrap; }
+
+/* ══════════════════════════════════════════════════════════
+   BSI TRACKER + RCD CHECKER
+   ══════════════════════════════════════════════════════════ */
+.bsi-rcd-grid { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.bsi-card, .rcd-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--r-2); padding: 24px; }
+.bsi-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 18px; flex-wrap: wrap; }
+.bsi-pill { font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: var(--r); background: var(--accent-bg); color: var(--accent-2); white-space: nowrap; }
+.bsi-step { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border-2); }
+.bsi-step:last-child { border-bottom: none; }
+.bsi-dot { width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--border); background: var(--white); margin-top: 3px; flex-shrink: 0; }
+.bsi-dot.done { background: var(--green); border-color: var(--green); }
+.bsi-dot.now { background: var(--accent); border-color: var(--accent); animation: blink 1.8s infinite; }
+.bsi-step-title { font-size: 13px; font-weight: 600; color: var(--ink); }
+.bsi-step.done .bsi-step-title { color: var(--green); }
+.bsi-step.now .bsi-step-title { color: var(--accent-2); }
+.bsi-step-date { font-size: 11px; color: var(--muted); margin-top: 1px; }
+.bsi-note { font-size: 12px; color: var(--mid); line-height: 1.6; padding-top: 12px; border-top: 1px solid var(--border-2); margin-top: 4px; }
+
+.rcd-head { display: flex; gap: 12px; margin-bottom: 16px; }
+.rcd-head-icon { font-size: 24px; }
+.rcd-head p { font-size: 12px; color: var(--mid); margin-top: 4px; line-height: 1.5; }
+.rcd-q { margin-bottom: 12px; }
+.rcd-q label { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 5px; }
+.rcd-select {
+  width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: var(--r);
+  font-family: var(--font); font-size: 13px; color: var(--ink); background: var(--white); outline: none;
+}
+.rcd-result { padding: 12px 14px; border-radius: var(--r); font-size: 13px; line-height: 1.6; margin-top: 12px; display: none; }
+.rcd-result.show { display: block; }
+.rcd-result.ok { background: var(--green-bg); color: var(--green); border: 1px solid #86EFAC; }
+.rcd-result.warn { background: var(--accent-bg); color: var(--accent-2); border: 1px solid #FED7AA; }
+
+/* ══════════════════════════════════════════════════════════
+   TOP KITS TABLE
+   ══════════════════════════════════════════════════════════ */
+.table-wrap { background: var(--white); border: 1px solid var(--border); border-radius: var(--r-2); overflow: hidden; }
+table.kits-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.kits-table th { background: var(--surface); padding: 12px 16px; text-align: left; font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--border); }
+.kits-table td { padding: 14px 16px; border-bottom: 1px solid var(--border-2); vertical-align: middle; }
+.kits-table tr:last-child td { border-bottom: none; }
+.kits-table tr:hover td { background: var(--surface); }
+.kt-prod { display: flex; align-items: center; gap: 10px; }
+.kt-img { width: 52px; height: 40px; object-fit: cover; border-radius: 4px; border: 1px solid var(--border); background: var(--surface); flex-shrink: 0; }
+.kt-name { font-weight: 700; font-size: 13px; }
+.kt-sub { font-size: 11px; color: var(--accent); font-weight: 600; }
+.kt-price { font-family: var(--font-d); font-size: 16px; font-weight: 800; }
+.kt-old { font-size: 11px; color: var(--muted); text-decoration: line-through; }
+.badge { font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: var(--r); display: inline-block; }
+.badge.green { background: var(--green-bg); color: var(--green); }
+.badge.amber { background: var(--accent-bg); color: var(--accent-2); }
+.kt-btn { padding: 8px 16px; background: var(--accent); color: var(--white); font-size: 12px; font-weight: 700; border: none; border-radius: var(--r); cursor: pointer; transition: background .15s; white-space: nowrap; }
+.kt-btn:hover { background: var(--accent-2); }
+
+/* ══════════════════════════════════════════════════════════
+   HOW IT WORKS
+   ══════════════════════════════════════════════════════════ */
+.how-grid { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: stretch; }
+.how-steps { display: flex; flex-direction: column; }
+.how-step { display: flex; align-items: center; gap: 14px; padding: 18px 0; border-bottom: 1px solid var(--border-2); }
+.how-step:last-child { border-bottom: none; }
+.how-num { width: 34px; height: 34px; border-radius: 50%; background: var(--ink); color: var(--white); font-family: var(--font-d); font-size: 15px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.how-arrow { font-size: 15px; color: var(--muted); }
+.how-icon { font-size: 24px; }
+.how-title { font-size: 14px; font-weight: 700; }
+.how-desc { font-size: 12px; color: var(--mid); margin-top: 2px; }
+.how-cta { background: var(--ink); border-radius: var(--r-2); padding: 28px; width: 260px; display: flex; flex-direction: column; justify-content: center; }
+.how-cta h3 { color: var(--white); font-size: 20px; margin-bottom: 10px; }
+.how-cta p { font-size: 13px; color: rgba(255,255,255,.6); line-height: 1.6; margin-bottom: 20px; }
+.how-cta a { display: block; text-align: center; padding: 12px; background: var(--accent); color: var(--white); font-size: 13px; font-weight: 700; border-radius: var(--r); text-decoration: none; transition: background .15s; }
+.how-cta a:hover { background: var(--accent-2); }
+
+/* ══════════════════════════════════════════════════════════
+   COMPLIANCE CHECKER + SAVINGS CALC SIDE BY SIDE
+   ══════════════════════════════════════════════════════════ */
+.cc-grid { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.cc-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--r-2); padding: 26px; }
+.cc-field { margin-bottom: 14px; }
+.cc-field label { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 5px; }
+.cc-input, .cc-select {
+  width: 100%; padding: 11px 14px; border: 1px solid var(--border); border-radius: var(--r);
+  font-family: var(--font); font-size: 14px; color: var(--ink); background: var(--white); outline: none; transition: border-color .15s;
+}
+.cc-input:focus, .cc-select:focus { border-color: var(--accent); }
+.cc-btn { width: 100%; padding: 13px; background: var(--green); color: var(--white); font-size: 14px; font-weight: 700; border: none; border-radius: var(--r); cursor: pointer; transition: background .15s; }
+.cc-btn:hover { background: #155A37; }
+.cc-result { margin-top: 16px; display: none; align-items: flex-start; gap: 14px; padding: 14px; background: var(--green-bg); border: 1px solid #86EFAC; border-radius: var(--r); }
+.cc-result.show { display: flex; }
+.cc-map { width: 80px; flex-shrink: 0; }
+.cc-status { font-size: 13px; color: var(--green); line-height: 1.6; font-weight: 500; }
+.cc-status a { color: var(--green); font-weight: 700; }
+
+/* Savings side */
+.bill-display { font-family: var(--font-d); font-size: 50px; font-weight: 800; color: var(--ink); line-height: 1; margin: 4px 0 12px; }
+.bill-range { width: 100%; appearance: none; height: 4px; background: var(--border); border-radius: 2px; outline: none; cursor: pointer; margin-bottom: 4px; }
+.bill-range::-webkit-slider-thumb { appearance: none; width: 20px; height: 20px; border-radius: 50%; background: var(--accent); border: 2px solid var(--white); box-shadow: 0 2px 6px rgba(0,0,0,.2); cursor: pointer; }
+.bill-range::-moz-range-thumb { width: 20px; height: 20px; border-radius: 50%; background: var(--accent); border: 2px solid var(--white); cursor: pointer; }
+.range-ends { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); margin-bottom: 24px; }
+.cc-outputs { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px; }
+.cc-out-label { font-size: 11px; color: var(--muted); margin-bottom: 3px; }
+.cc-out-val { font-family: var(--font-d); font-size: 28px; font-weight: 800; line-height: 1; }
+.cc-out-val.g { color: var(--green); }
+.cc-out-val.o { color: var(--accent); }
+.cc-out-sub { font-size: 10px; color: var(--muted); margin-top: 2px; }
+
+/* ══════════════════════════════════════════════════════════
+   CALCULATOR (dark section)
+   ══════════════════════════════════════════════════════════ */
+.calc-section { background: var(--ink); padding: var(--section) 32px; }
+.calc-inner { max-width: var(--max); margin: 0 auto; }
+.calc-section h2 { color: var(--white); }
+.calc-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
+.ofgem-chip { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: var(--r); padding: 8px 14px; font-size: 12px; color: rgba(255,255,255,.55); white-space: nowrap; }
+.ofgem-chip strong { color: rgba(255,255,255,.85); }
+.calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.calc-field { margin-bottom: 18px; }
+.calc-field label { font-size: 13px; color: rgba(255,255,255,.7); display: block; margin-bottom: 8px; }
+.calc-field label strong { color: var(--accent); }
+.calc-select {
+  width: 100%; padding: 12px 14px; border: 1px solid rgba(255,255,255,.15); border-radius: var(--r);
+  font-family: var(--font); font-size: 14px; color: var(--white); background: rgba(255,255,255,.05); outline: none; cursor: pointer;
+}
+.calc-select option { color: var(--ink); }
+.calc-range { width: 100%; appearance: none; height: 4px; background: rgba(255,255,255,.15); border-radius: 2px; outline: none; cursor: pointer; margin-bottom: 6px; }
+.calc-range::-webkit-slider-thumb { appearance: none; width: 20px; height: 20px; border-radius: 50%; background: var(--accent); border: 2px solid var(--white); cursor: pointer; }
+.calc-range-ends { display: flex; justify-content: space-between; font-size: 11px; color: rgba(255,255,255,.4); }
+.adv-toggle { font-size: 12px; color: rgba(255,255,255,.5); cursor: pointer; padding: 10px 0; user-select: none; transition: color .15s; }
+.adv-toggle:hover { color: var(--accent); }
+.adv-box { display: none; padding: 14px 0 4px; }
+.adv-box.open { display: block; }
+.adv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.adv-hint { font-size: 10px; color: rgba(255,255,255,.3); font-weight: 400; }
+
+/* Result panel */
+.result-panel { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1); border-radius: var(--r-2); padding: 26px; }
+.result-label { font-size: 12px; color: rgba(255,255,255,.5); margin-bottom: 4px; }
+.result-num { font-family: var(--font-d); font-size: 52px; font-weight: 800; color: var(--white); line-height: 1; }
+.result-period { font-size: 12px; color: rgba(255,255,255,.4); margin-top: 4px; margin-bottom: 18px; }
+.result-row { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,.08); font-size: 13px; }
+.result-row:last-child { border-bottom: none; }
+.rr-label { color: rgba(255,255,255,.55); }
+.rr-val { font-weight: 700; color: var(--white); }
+.rr-val.good { color: #6EE7A0; }
+.kit-rec { margin-top: 16px; padding: 12px 14px; background: rgba(232,123,45,.1); border: 1px solid rgba(232,123,45,.25); border-radius: var(--r); }
+.kit-rec-label { font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--accent); margin-bottom: 3px; }
+.kit-rec-name { font-size: 14px; font-weight: 700; color: var(--white); }
+.kit-rec-price { font-size: 12px; color: rgba(255,255,255,.5); margin-top: 2px; }
+.result-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 18px; }
+.result-actions .btn-primary { flex: 1; justify-content: center; }
+.pdf-btn { padding: 12px 16px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.15); border-radius: var(--r); color: rgba(255,255,255,.7); font-size: 13px; cursor: pointer; transition: all .15s; white-space: nowrap; }
+.pdf-btn:hover { background: rgba(255,255,255,.12); color: var(--white); }
+
+/* Email capture under calc */
+.calc-email { margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.08); display: flex; gap: 10px; flex-wrap: wrap; }
+.calc-email input { flex: 1; min-width: 200px; padding: 12px 14px; border: 1px solid rgba(255,255,255,.15); border-radius: var(--r); background: rgba(255,255,255,.05); color: var(--white); font-family: var(--font); font-size: 13px; outline: none; }
+.calc-email input::placeholder { color: rgba(255,255,255,.35); }
+.calc-email input:focus { border-color: var(--accent); }
+
+/* ══════════════════════════════════════════════════════════
+   PRODUCT GRID
+   ══════════════════════════════════════════════════════════ */
+.filter-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.filter-btn { padding: 8px 16px; border: 1px solid var(--border); border-radius: 100px; background: var(--white); font-size: 12px; font-weight: 600; color: var(--mid); cursor: pointer; transition: all .15s; }
+.filter-btn.active, .filter-btn:hover { background: var(--ink); color: var(--white); border-color: var(--ink); }
+.products-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.pcard { background: var(--white); border: 1px solid var(--border); border-radius: var(--r-2); overflow: hidden; transition: all .2s; position: relative; }
+.pcard:hover { box-shadow: 0 10px 30px rgba(15,36,68,.1); transform: translateY(-2px); }
+.pcard.best { border: 2px solid var(--accent); }
+.pcard-badge { position: absolute; top: 12px; left: 12px; background: var(--accent); color: var(--white); font-size: 10px; font-weight: 700; padding: 4px 10px; border-radius: 100px; z-index: 2; }
+.pcard-img { width: 100%; height: 150px; object-fit: cover; background: var(--surface); }
+.pcard-body { padding: 18px; }
+.pcard-brand { font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+.pcard-name { font-family: var(--font-d); font-size: 16px; font-weight: 700; margin-bottom: 6px; min-height: 44px; }
+.pcard-price { font-family: var(--font-d); font-size: 24px; font-weight: 800; margin-bottom: 4px; }
+.pcard-old { font-size: 12px; color: var(--muted); text-decoration: line-through; margin-bottom: 10px; }
+.pcard-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 12px; }
+.pstat { background: var(--surface); padding: 8px 10px; border-radius: var(--r); }
+.pstat-label { font-size: 9px; color: var(--muted); }
+.pstat-val { font-size: 12px; font-weight: 700; color: var(--ink); }
+.urgency { font-size: 11px; color: var(--accent-2); font-weight: 600; margin-bottom: 8px; display: flex; align-items: center; gap: 5px; }
+.stock-bar { height: 4px; background: var(--border-2); border-radius: 2px; overflow: hidden; margin-bottom: 12px; }
+.stock-fill { height: 100%; border-radius: 2px; }
+.pcard-btn { display: block; width: 100%; padding: 11px; background: var(--accent); color: var(--white); font-size: 13px; font-weight: 700; border: none; border-radius: var(--r); cursor: pointer; text-align: center; text-decoration: none; transition: background .15s; margin-bottom: 6px; }
+.pcard-btn:hover { background: var(--accent-2); }
+.pcard-alert { display: block; width: 100%; padding: 9px; background: none; border: 1px dashed var(--border); color: var(--mid); font-size: 11px; border-radius: var(--r); cursor: pointer; text-align: center; transition: all .15s; }
+.pcard-alert:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ══════════════════════════════════════════════════════════
+   BEST 4-COLUMN GRID
+   ══════════════════════════════════════════════════════════ */
+.best-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-bottom: 28px; }
+.best-card { border: 1px solid var(--border); border-radius: var(--r-2); overflow: hidden; transition: all .2s; }
+.best-card:hover { box-shadow: 0 8px 24px rgba(15,36,68,.1); transform: translateY(-2px); }
+.best-strip { font-size: 11px; font-weight: 700; padding: 7px 12px; text-align: center; color: var(--white); }
+.best-img { width: 100%; height: 130px; object-fit: cover; background: var(--surface); }
+.best-body { padding: 14px; }
+.best-name { font-size: 13px; font-weight: 700; margin-bottom: 4px; line-height: 1.3; min-height: 34px; }
+.best-price { font-family: var(--font-d); font-size: 19px; font-weight: 800; margin-bottom: 4px; }
+.best-stars { font-size: 11px; color: var(--accent); margin-bottom: 10px; }
+.best-stars span { color: var(--muted); }
+.best-link { font-size: 12px; font-weight: 700; color: var(--accent); text-decoration: none; }
+.supplier-line { text-align: center; padding: 18px 0 0; border-top: 1px solid var(--border); font-size: 15px; font-weight: 500; color: var(--mid); }
+
+/* ══════════════════════════════════════════════════════════
+   TRUST + CHART
+   ══════════════════════════════════════════════════════════ */
+.trust-grid { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1.4fr; gap: 24px; }
+.trust-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--r-2); padding: 24px; }
+.tp-score { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.tp-num { font-family: var(--font-d); font-size: 32px; font-weight: 800; }
+.tp-stars { color: var(--green); font-size: 16px; }
+.tp-sub { font-size: 13px; color: var(--mid); margin-bottom: 16px; }
+.testimonial { border-top: 1px solid var(--border-2); padding-top: 16px; display: flex; gap: 12px; }
+.t-avatar { width: 40px; height: 40px; border-radius: 50%; overflow: hidden; flex-shrink: 0; background: var(--border); }
+.t-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.t-quote { font-size: 13px; color: var(--ink); line-height: 1.6; margin-bottom: 6px; font-style: italic; }
+.t-name { font-size: 12px; font-weight: 700; }
+.t-stars { color: var(--accent); font-size: 12px; }
+.chart-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--r-2); padding: 24px; }
+.chart-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.chart-head h3 { font-size: 15px; }
+.chart-updated { font-size: 11px; color: var(--muted); }
+
+/* ══════════════════════════════════════════════════════════
+   ARTICLES
+   ══════════════════════════════════════════════════════════ */
+.articles-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; }
+.article-card { text-decoration: none; color: inherit; }
+.article-img { width: 100%; height: 130px; object-fit: cover; border-radius: var(--r); background: var(--surface); margin-bottom: 12px; }
+.article-tag { font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+.article-title { font-size: 14px; font-weight: 700; line-height: 1.35; margin-bottom: 6px; }
+.article-read { font-size: 12px; color: var(--accent); font-weight: 600; }
+
+/* ══════════════════════════════════════════════════════════
+   FAQ
+   ══════════════════════════════════════════════════════════ */
+.faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
+.faq-item { border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; }
+.faq-q { width: 100%; text-align: left; padding: 16px 18px; background: var(--white); border: none; font-size: 14px; font-weight: 600; color: var(--ink); display: flex; justify-content: space-between; align-items: center; gap: 12px; cursor: pointer; }
+.faq-q:hover { background: var(--surface); }
+.faq-chevron { transition: transform .2s; flex-shrink: 0; color: var(--muted); }
+.faq-item.open .faq-chevron { transform: rotate(180deg); }
+.faq-a { display: none; padding: 0 18px 16px; font-size: 13px; color: var(--mid); line-height: 1.7; }
+.faq-item.open .faq-a { display: block; }
+.faq-a a { color: var(--accent); font-weight: 600; }
+
+/* ══════════════════════════════════════════════════════════
+   DNO WIZARD
+   ══════════════════════════════════════════════════════════ */
+.dno-card { max-width: 720px; margin: 0 auto; background: var(--white); border: 1px solid var(--border); border-radius: var(--r-2); overflow: hidden; }
+.dno-progress { display: flex; background: var(--surface); border-bottom: 1px solid var(--border); }
+.dno-dot-wrap { flex: 1; padding: 16px 8px; text-align: center; border-right: 1px solid var(--border); }
+.dno-dot-wrap:last-child { border-right: none; }
+.dno-dot { width: 28px; height: 28px; border-radius: 50%; background: var(--white); border: 2px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: var(--muted); margin: 0 auto 4px; transition: all .2s; }
+.dno-dot-wrap.active .dno-dot { background: var(--accent); border-color: var(--accent); color: var(--white); }
+.dno-dot-wrap.done .dno-dot { background: var(--green); border-color: var(--green); color: var(--white); }
+.dno-dot-label { font-size: 10px; color: var(--muted); }
+.dno-dot-wrap.active .dno-dot-label { color: var(--accent-2); font-weight: 600; }
+.dno-body { padding: 32px; }
+.dno-step { display: none; }
+.dno-step.active { display: block; }
+.dno-step h3 { margin-bottom: 6px; }
+.dno-step p.dno-sub { font-size: 13px; color: var(--mid); margin-bottom: 24px; }
+.dno-field { margin-bottom: 16px; }
+.dno-field label { font-size: 12px; font-weight: 600; color: var(--ink); display: block; margin-bottom: 6px; }
+.dno-input, .dno-select { width: 100%; padding: 11px 14px; border: 1px solid var(--border); border-radius: var(--r); font-family: var(--font); font-size: 14px; color: var(--ink); outline: none; }
+.dno-input:focus, .dno-select:focus { border-color: var(--accent); }
+.dno-row { display: flex; gap: 12px; }
+.dno-row > * { flex: 1; }
+.dno-nav { display: flex; justify-content: space-between; gap: 12px; margin-top: 28px; }
+.dno-back { padding: 11px 20px; background: var(--white); border: 1px solid var(--border); border-radius: var(--r); color: var(--mid); font-size: 14px; font-weight: 600; cursor: pointer; }
+.dno-next { padding: 11px 24px; background: var(--accent); color: var(--white); border: none; border-radius: var(--r); font-size: 14px; font-weight: 700; cursor: pointer; transition: background .15s; }
+.dno-next:hover { background: var(--accent-2); }
+.dno-summary-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border-2); font-size: 13px; }
+.dno-summary-row:last-child { border-bottom: none; }
+.dno-summary-label { color: var(--mid); }
+.dno-summary-val { font-weight: 700; }
+.dno-certificate { background: var(--green-bg); border: 1px solid #86EFAC; border-radius: var(--r); padding: 20px; text-align: center; margin-bottom: 20px; }
+.dno-cert-icon { font-size: 36px; margin-bottom: 8px; }
+.dno-cert-id { font-family: var(--font-d); font-size: 18px; font-weight: 800; color: var(--green); margin-bottom: 4px; }
+
+/* ══════════════════════════════════════════════════════════
+   FINAL CTA + STICKY BAR
+   ══════════════════════════════════════════════════════════ */
+.final-cta { background: var(--ink); padding: var(--section) 32px; text-align: center; }
+.final-cta h2 { color: var(--white); margin-bottom: 12px; }
+.final-cta p { color: rgba(255,255,255,.6); margin-bottom: 28px; max-width: 480px; margin-left: auto; margin-right: auto; }
+.final-cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+.sticky-bar { position: fixed; bottom: 0; left: 0; right: 0; background: var(--ink); padding: 14px 32px; display: flex; align-items: center; justify-content: space-between; gap: 16px; z-index: 90; transform: translateY(100%); transition: transform .3s; box-shadow: 0 -4px 20px rgba(0,0,0,.15); }
+.sticky-bar.show { transform: translateY(0); }
+.sticky-text { font-size: 14px; font-weight: 600; color: var(--white); }
+.sticky-actions { display: flex; gap: 8px; flex-shrink: 0; }
+.sticky-btn { padding: 9px 18px; border-radius: var(--r); font-size: 13px; font-weight: 700; text-decoration: none; white-space: nowrap; }
+.sticky-btn.primary { background: var(--accent); color: var(--white); }
+.sticky-btn.secondary { background: transparent; border: 1px solid rgba(255,255,255,.3); color: var(--white); }
+
+/* ══════════════════════════════════════════════════════════
+   FOOTER
+   ══════════════════════════════════════════════════════════ */
+footer { background: var(--ink-2); }
+.footer-top { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 2fr; gap: 36px; padding: 56px 32px 40px; }
+.f-logo { display: flex; align-items: center; gap: 8px; font-family: var(--font-d); font-size: 18px; font-weight: 800; color: var(--white); margin-bottom: 12px; }
+.f-logo-mark { width: 22px; height: 22px; background: var(--accent); clip-path: polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%); }
+.f-desc { font-size: 13px; color: rgba(255,255,255,.45); line-height: 1.65; margin-bottom: 18px; }
+.f-social { display: flex; gap: 8px; }
+.f-soc { width: 34px; height: 34px; border-radius: var(--r); border: 1px solid rgba(255,255,255,.15); background: rgba(255,255,255,.06); color: rgba(255,255,255,.6); display: flex; align-items: center; justify-content: center; text-decoration: none; transition: all .15s; }
+.f-soc:hover { background: var(--accent); border-color: var(--accent); color: var(--white); }
+.f-col-title { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--white); margin-bottom: 14px; }
+.f-link { display: block; font-size: 13px; color: rgba(255,255,255,.45); text-decoration: none; margin-bottom: 10px; transition: color .15s; }
+.f-link:hover { color: rgba(255,255,255,.85); }
+.f-nl-input { width: 100%; padding: 10px 14px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.15); border-radius: var(--r); font-family: var(--font); font-size: 13px; color: var(--white); outline: none; margin-bottom: 8px; }
+.f-nl-input::placeholder { color: rgba(255,255,255,.3); }
+.f-nl-btn { width: 100%; padding: 10px; background: var(--accent); color: var(--white); font-size: 13px; font-weight: 700; border: none; border-radius: var(--r); cursor: pointer; }
+.f-nl-fine { font-size: 11px; color: rgba(255,255,255,.25); margin-top: 6px; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.08); }
+.fb-inner { max-width: var(--max); margin: 0 auto; padding: 16px 32px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.fb-legal { font-size: 11px; color: rgba(255,255,255,.2); }
+.fb-badges { display: flex; gap: 8px; }
+.fb-badge { font-size: 10px; font-weight: 600; padding: 3px 10px; border-radius: var(--r); background: rgba(255,255,255,.06); color: rgba(255,255,255,.4); border: 1px solid rgba(255,255,255,.1); }
+
+/* ══════════════════════════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .hero-grid { grid-template-columns: 1fr; gap: 36px; padding: 48px 24px 56px; }
+  .feat { min-width: 33%; }
+  .calc-grid { grid-template-columns: 1fr; gap: 28px; }
+  .cc-grid, .bsi-rcd-grid { grid-template-columns: 1fr; }
+  .products-grid { grid-template-columns: repeat(2,1fr); }
+  .best-grid { grid-template-columns: repeat(2,1fr); }
+  .articles-grid { grid-template-columns: repeat(2,1fr); }
+  .trust-grid { grid-template-columns: 1fr; }
+  .how-grid { grid-template-columns: 1fr; }
+  .how-cta { width: 100%; }
+}
+@media (max-width: 768px) {
+  .container, .section { padding-left: 16px; padding-right: 16px; }
+  .legal-banner, .feat-strip { padding-left: 16px; padding-right: 16px; }
+  nav { padding: 0 16px; }
+  .nav-login { display: none; }
+  h1 { font-size: 30px; }
+  h2 { font-size: 24px; }
+  .hero-btns, .final-cta-btns { flex-direction: column; }
+  .hero-btns a, .final-cta-btns a { width: 100%; justify-content: center; }
+  .feat { min-width: 50%; border-bottom: 1px solid var(--border); }
+  .feat:nth-child(odd) { border-right: 1px solid var(--border); }
+  .feat:nth-child(even) { border-right: none; }
+  .kits-table { font-size: 11px; }
+  .kits-table th:nth-child(3), .kits-table td:nth-child(3),
+  .kits-table th:nth-child(4), .kits-table td:nth-child(4) { display: none; }
+  .kt-img { width: 40px; height: 32px; }
+  .products-grid { grid-template-columns: 1fr; }
+  .best-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .articles-grid { grid-template-columns: 1fr; }
+  .adv-grid { grid-template-columns: 1fr; }
+  .cc-outputs { grid-template-columns: 1fr 1fr; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 24px; padding: 36px 16px 28px; }
+  .f-logo, .f-desc, .f-social { }
+  .footer-top > div:first-child, .footer-top > div:last-child { grid-column: 1 / 3; }
+  .fb-inner { flex-direction: column; text-align: center; padding: 14px 16px; }
+  .sticky-bar { flex-direction: column; text-align: center; padding: 12px 16px; }
+  .sticky-actions { width: 100%; }
+  .sticky-btn { flex: 1; text-align: center; }
+}
+@media (max-width: 480px) {
+  .best-grid { grid-template-columns: 1fr 1fr; }
+  .feat { min-width: 100%; border-right: none !important; }
+  .result-num { font-size: 40px; }
+  .bill-display { font-size: 38px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════ NAV ══════════════════ -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <div class="logo-mark"></div>
+      <div>
+        PluginDirect
+        <span class="logo-sub">Plug-In Solar Marketplace</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#compare">Compare Kits</a></li>
+      <li><a href="#calc">Savings Calculator</a></li>
+      <li><a href="#dno">DNO Registration</a></li>
+      <li><a href="#guides">Guides</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="#" class="nav-login">👤 Login</a>
+      <a href="#compare" class="nav-cta">Get Started</a>
+      <button class="hamburger" onclick="document.getElementById('mob-menu').classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mob-menu">
+  <a href="#compare" onclick="closeMob()">Compare Kits</a>
+  <a href="#calc" onclick="closeMob()">Savings Calculator</a>
+  <a href="#dno" onclick="closeMob()">DNO Registration</a>
+  <a href="#guides" onclick="closeMob()">Guides</a>
+  <a href="#faq" onclick="closeMob()">FAQ</a>
+  <a href="#compare" class="mob-cta" onclick="closeMob()">Get Started</a>
+</div>
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-badge">✓ Fully 2026 Compliant · BS 7671 Amendment 4</div>
+      <h1>Compare Plug-In<br>Solar Kits in the UK</h1>
+      <span class="hero-sub">(Fully 2026 Compliant)</span>
+      <p class="hero-desc">Find the cheapest, safest, and regulation-approved solar kits under 800W — no electrician required.</p>
+      <div class="hero-btns">
+        <a href="#compare" class="btn-primary">Compare Solar Kits →</a>
+        <a href="#compliance" class="btn-secondary">Check If Your Home Qualifies</a>
+      </div>
+      <div class="hero-trust">
+        <span>🇬🇧 UK Regulation Checked</span>
+        <span>✅ ENA Compliant</span>
+        <span>⭐ 4.6/5 Rating</span>
+        <span>🔒 No Spam</span>
+      </div>
+      <div class="hero-proof">
+        <span>⚡ 47 kits compared</span>
+        <div class="proof-dot"></div>
+        <span>✓ UK-certified only</span>
+        <div class="proof-dot"></div>
+        <span>4,217 households helped</span>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-img-wrap">
+        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80"
+             alt="Plug-in solar panel installed on a UK balcony"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=800&q=80'">
+        <div class="hero-float-badge hfb-bl">
+          <div class="hfb-num">£220</div>
+          <div class="hfb-label">avg. saving / yr</div>
+        </div>
+        <div class="hero-float-badge hfb-tr">
+          <div class="live-dot"></div>
+          <div style="font-size:11px;font-weight:700;color:var(--ink);">4,217 UK homes saving</div>
+        </div>
+      </div>
+
+      <div class="widget">
+        <h3>What are you looking for?</h3>
+        <div class="w-field">
+          <span class="w-label">Property type</span>
+          <select class="w-select" id="w-prop">
+            <option value="">Select property type</option>
+            <option>House</option>
+            <option>Flat / apartment</option>
+            <option>Bungalow</option>
+          </select>
+        </div>
+        <div class="w-field">
+          <span class="w-label">Installation type</span>
+          <select class="w-select" id="w-install">
+            <option value="">Select installation type</option>
+            <option>Balcony</option>
+            <option>Garden / ground</option>
+            <option>Wall-mounted</option>
+          </select>
+        </div>
+        <div class="w-field">
+          <span class="w-label">Budget</span>
+          <select class="w-select" id="w-budget">
+            <option value="">Select your budget</option>
+            <option>Under £300</option>
+            <option>£300 – £600</option>
+            <option>£600 – £1,000</option>
+            <option>£1,000+</option>
+          </select>
+        </div>
+        <button class="w-submit" onclick="showMyMatches()">Show My Matches →</button>
+        <div class="w-social">
+          <div class="w-avatars">
+            <div class="w-av"><img src="https://randomuser.me/api/portraits/women/12.jpg" alt=""></div>
+            <div class="w-av"><img src="https://randomuser.me/api/portraits/men/22.jpg" alt=""></div>
+            <div class="w-av"><img src="https://randomuser.me/api/portraits/women/32.jpg" alt=""></div>
+            <div class="w-av"><img src="https://randomuser.me/api/portraits/men/41.jpg" alt=""></div>
+          </div>
+          <div class="w-social-text">Join 51,600+ UK homeowners<br><strong>already saving with solar</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ FEATURE STRIP ══════════════════ -->
+<div class="feat-strip">
+  <a href="#compare" class="feat">
+    <div class="feat-icon">☀️</div>
+    <div class="feat-title">Compare Solar Kits</div>
+    <div class="feat-desc">Compare price, output, payback and more.</div>
+    <div class="feat-link">Compare kits →</div>
+  </a>
+  <a href="#compliance" class="feat">
+    <div class="feat-icon">🛡️</div>
+    <div class="feat-title">Check Compliance</div>
+    <div class="feat-desc">See if your home qualifies in seconds.</div>
+    <div class="feat-link">Check now →</div>
+  </a>
+  <a href="#calc" class="feat">
+    <div class="feat-icon">🧮</div>
+    <div class="feat-title">Savings Calculator</div>
+    <div class="feat-desc">Calculate your exact savings and payback.</div>
+    <div class="feat-link">Calculate now →</div>
+  </a>
+  <a href="#compare" class="feat">
+    <div class="feat-icon">💰</div>
+    <div class="feat-title">Best Deals Under £500</div>
+    <div class="feat-desc">Find the best plug-in solar under £500.</div>
+    <div class="feat-link">View deals →</div>
+  </a>
+  <a href="#dno" class="feat">
+    <div class="feat-icon">📋</div>
+    <div class="feat-title">DNO Registration</div>
+    <div class="feat-desc">Complete your free registration online.</div>
+    <div class="feat-link">Register now →</div>
+  </a>
+</div>
+
+<!-- ══════════════════ LEGAL BANNER ══════════════════ -->
+<div class="legal-banner">
+  <div class="legal-inner">
+    <div class="legal-icon">✅</div>
+    <div class="legal-content">
+      <h4>Fully legal in the UK as of 15 April 2026</h4>
+      <p>BS 7671 Amendment 4 came into force on 15 April 2026, making sub-800W plug-in solar systems legal to connect to a standard UK socket. All products on PluginDirect are UK-certified and compliant. Renters can now request installation under the <a href="#faq">Renters' Rights Act 2025</a> — landlords cannot unreasonably refuse.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════ BSI TRACKER + RCD CHECKER ══════════════════ -->
+<section class="section">
+  <div class="bsi-rcd-grid">
+
+    <div class="bsi-card">
+      <div class="bsi-head">
+        <div>
+          <span class="section-tag" style="margin-bottom:4px;">Live tracker</span>
+          <h3>BSI Plug-In Solar Standard</h3>
+        </div>
+        <span class="bsi-pill">⏳ Pending — July 2026</span>
+      </div>
+      <div class="bsi-step done">
+        <div class="bsi-dot done"></div>
+        <div>
+          <div class="bsi-step-title">Government announcement</div>
+          <div class="bsi-step-date">March 2026 ✓</div>
+        </div>
+      </div>
+      <div class="bsi-step done">
+        <div class="bsi-dot done"></div>
+        <div>
+          <div class="bsi-step-title">BS 7671 Amendment 4 — wiring regulations updated</div>
+          <div class="bsi-step-date">15 April 2026 ✓</div>
+        </div>
+      </div>
+      <div class="bsi-step now">
+        <div class="bsi-dot now"></div>
+        <div>
+          <div class="bsi-step-title">BSI product standard — kit certification</div>
+          <div class="bsi-step-date">Expected July 2026 ← We are here</div>
+        </div>
+      </div>
+      <div class="bsi-step">
+        <div class="bsi-dot"></div>
+        <div>
+          <div class="bsi-step-title">First BSI-certified kits available at UK retailers</div>
+          <div class="bsi-step-date">From July 2026 (projected)</div>
+        </div>
+      </div>
+      <p class="bsi-note">Once the BSI standard publishes, kits certified to it can be self-installed with full confidence. We'll update this tracker the day it's confirmed.</p>
+    </div>
+
+    <div class="rcd-card">
+      <div class="rcd-head">
+        <div class="rcd-head-icon">🔌</div>
+        <div>
+          <h3>Does your home need an RCD check?</h3>
+          <p>BS 7671 A4 requires Type A RCD protection on any circuit with plug-in solar connected.</p>
+        </div>
+      </div>
+      <div class="rcd-q">
+        <label>When was your home last rewired?</label>
+        <select class="rcd-select" id="rcd-age" onchange="checkRCD()">
+          <option value="">Select year range</option>
+          <option value="new">After 2010 (modern)</option>
+          <option value="mid">2000 – 2010</option>
+          <option value="old">Before 2000 (older wiring)</option>
+        </select>
+      </div>
+      <div class="rcd-q">
+        <label>Do you have an RCD in your fuse box?</label>
+        <select class="rcd-select" id="rcd-type" onchange="checkRCD()">
+          <option value="">I'm not sure / let me check</option>
+          <option value="typeA">Yes — Type A RCD (new style)</option>
+          <option value="typeAC">Yes — Type AC RCD (older style)</option>
+          <option value="none">No RCD visible</option>
+        </select>
+      </div>
+      <div class="rcd-result" id="rcd-result"></div>
+      <a href="#faq" style="font-size:12px;color:var(--green);font-weight:600;">What's an RCD and where do I find mine? →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════ TOP KITS TABLE ══════════════════ -->
+<section class="section alt">
+  <div class="container">
+    <div class="section-flex-head">
+      <h2>Top Plug-In Solar Kits This Month</h2>
+      <a href="#compare" class="see-all">View all kits →</a>
+    </div>
+    <div class="table-wrap">
+      <table class="kits-table">
+        <thead>
+          <tr><th>Product</th><th>Price</th><th>Output</th><th>Payback</th><th>Compliance</th><th>Rating</th><th>View Deal</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="kt-prod">
+                <img class="kt-img" src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=120&q=70" alt="" onerror="this.style.background='var(--surface)';this.src=''">
+                <div><div class="kt-name">EcoFlow PowerStream 800W</div><div class="kt-sub">▼ Price Drop</div></div>
+              </div>
+            </td>
+            <td><div class="kt-price">£479</div><div class="kt-old">£629</div></td>
+            <td>600W</td>
+            <td>3.2 yrs</td>
+            <td><span class="badge green">✓ Compliant</span></td>
+            <td style="color:var(--accent);">★★★★☆ <span style="color:var(--muted);font-size:11px;">(485)</span></td>
+            <td><button class="kt-btn" onclick="window.open('https://www.ecoflow.com/uk/products/stream-series','_blank')">View Deal →</button></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="kt-prod">
+                <img class="kt-img" src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=120&q=70" alt="" onerror="this.style.background='var(--surface)';this.src=''">
+                <div><div class="kt-name">Anker SOLIX 800W Kit</div><div class="kt-sub" style="color:var(--muted);">Was £650</div></div>
+              </div>
+            </td>
+            <td><div class="kt-price">£435</div></td>
+            <td>800W</td>
+            <td>3.8 yrs</td>
+            <td><span class="badge green">✓ Compliant</span></td>
+            <td style="color:var(--accent);">★★★★☆ <span style="color:var(--muted);font-size:11px;">(250)</span></td>
+            <td><button class="kt-btn" onclick="window.open('https://www.anker.com/collections/solix-balcony-solar','_blank')">View Deal →</button></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="kt-prod">
+                <img class="kt-img" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=120&q=70" alt="" onerror="this.style.background='var(--surface)';this.src=''">
+                <div><div class="kt-name">Generic 400W Starter Kit</div><div class="kt-sub" style="color:var(--muted);">Budget pick</div></div>
+              </div>
+            </td>
+            <td><div class="kt-price">£299</div></td>
+            <td>400W</td>
+            <td>4.5 yrs</td>
+            <td><span class="badge amber">⚠ Check Required</span></td>
+            <td style="color:var(--accent);">★★★★☆ <span style="color:var(--muted);font-size:11px;">(33)</span></td>
+            <td><button class="kt-btn" onclick="document.getElementById('compare').scrollIntoView({behavior:'smooth'})">View Deal →</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ HOW IT WORKS ══════════════════ -->
+<section class="section">
+  <div class="container">
+    <h2 style="text-align:center;margin-bottom:40px;">How Plug-In Solar Works</h2>
+    <div class="how-grid">
+      <div class="how-steps">
+        <div class="how-step">
+          <div class="how-num">1</div>
+          <div class="how-arrow">→</div>
+          <div class="how-icon">🔍</div>
+          <div>
+            <div class="how-title">Compare Kits</div>
+            <div class="how-desc">Find the right kit for your home and budget.</div>
+          </div>
+        </div>
+        <div class="how-step">
+          <div class="how-num">2</div>
+          <div class="how-arrow">→</div>
+          <div class="how-icon">🛡️</div>
+          <div>
+            <div class="how-title">Check Compliance</div>
+            <div class="how-desc">We check regulations so you stay compliant.</div>
+          </div>
+        </div>
+        <div class="how-step">
+          <div class="how-num">3</div>
+          <div class="how-arrow">→</div>
+          <div class="how-icon">⚡</div>
+          <div>
+            <div class="how-title">Start Saving</div>
+            <div class="how-desc">Install in minutes and start reducing your bills.</div>
+          </div>
+        </div>
+      </div>
+      <div class="how-cta">
+        <h3>Ready to start saving?</h3>
+        <p>Join thousands of UK homeowners who are already saving on their energy bills with plug-in solar.</p>
+        <a href="#compare">Compare Kits Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ COMPLIANCE CHECKER + SAVINGS SIDE ══════════════════ -->
+<section class="section alt" id="compliance">
+  <div class="cc-grid">
+
+    <div class="cc-card">
+      <h3 style="margin-bottom:18px;">Check if Plug-In Solar is Legal for Your Home</h3>
+      <div class="cc-field">
+        <label>Postcode</label>
+        <input type="text" class="cc-input" id="cc-postcode" placeholder="Enter your postcode" style="text-transform:uppercase;">
+      </div>
+      <div class="cc-field">
+        <label>Property type</label>
+        <select class="cc-select" id="cc-prop">
+          <option value="">Select property type</option>
+          <option>Flat / apartment</option>
+          <option>Terraced house</option>
+          <option>Semi-detached house</option>
+          <option>Detached house</option>
+        </select>
+      </div>
+      <div class="cc-field">
+        <label>System size</label>
+        <select class="cc-select" id="cc-size">
+          <option value="400">Up to 400W</option>
+          <option value="800" selected>Up to 800W</option>
+        </select>
+      </div>
+      <button class="cc-btn" onclick="runComplianceCheck()">Check Now · It's Free</button>
+      <div class="cc-result" id="cc-result">
+        <svg class="cc-map" viewBox="0 0 200 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M100 15 L118 28 L128 48 L140 62 L136 82 L148 96 L140 116 L150 132 L144 152 L128 166 L122 190 L108 210 L98 200 L88 186 L76 168 L70 150 L56 136 L52 116 L62 98 L54 78 L66 62 L62 42 L76 28 L90 18 Z" fill="#DDE3EC" stroke="#0F2444" stroke-width="1.5"/>
+          <circle cx="100" cy="120" r="9" fill="#1A6B42"/>
+          <circle cx="100" cy="120" r="15" fill="#1A6B42" opacity="0.2"/>
+        </svg>
+        <div class="cc-status" id="cc-status"></div>
+      </div>
+    </div>
+
+    <div class="cc-card">
+      <h3 style="margin-bottom:4px;">How Much Could You Save?</h3>
+      <p style="font-size:13px;color:var(--mid);margin-bottom:0;">Your current monthly electricity bill</p>
+      <div class="bill-display" id="bill-display-side">£150</div>
+      <input type="range" class="bill-range" id="bill-range-side" min="15" max="300" value="150" oninput="updateSideCalc(this.value)">
+      <div class="range-ends"><span>£15</span><span>£300</span></div>
+      <div class="cc-outputs">
+        <div>
+          <div class="cc-out-label">Estimated annual saving</div>
+          <div class="cc-out-val g" id="side-annual">£180</div>
+          <div class="cc-out-sub">27.7p/kWh Ofgem Q2 2026</div>
+        </div>
+        <div>
+          <div class="cc-out-label">Estimated payback period</div>
+          <div class="cc-out-val o" id="side-payback">3.5 Years</div>
+          <div class="cc-out-sub">Based on 800W kit at £549</div>
+        </div>
+      </div>
+      <button class="cc-btn" style="background:var(--accent);" onclick="document.getElementById('calc').scrollIntoView({behavior:'smooth'})">Calculate My Savings →</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════ CALCULATOR ══════════════════ -->
+<section class="calc-section" id="calc">
+  <div class="calc-inner">
+    <div class="calc-top">
+      <div>
+        <span class="section-tag">UK's most accurate savings calculator</span>
+        <h2>See exactly what you'd save</h2>
+      </div>
+      <div class="ofgem-chip">Using Ofgem Q2 2026 rate: <strong>27.7p/kWh</strong></div>
+    </div>
+
+    <div class="calc-grid">
+      <div>
+        <div class="calc-field">
+          <label>System size</label>
+          <select class="calc-select" id="kit-size" onchange="calcSavings()">
+            <option value="400">400W (1 panel) — from £199</option>
+            <option value="800" selected>800W (2 panels) — from £399</option>
+          </select>
+        </div>
+        <div class="calc-field">
+          <label>Your city or region</label>
+          <select class="calc-select" id="location" onchange="calcSavings()">
+            <optgroup label="— South England —">
+              <option value="south">London</option>
+              <option value="south">Brighton</option>
+              <option value="south">Bristol</option>
+              <option value="south">Oxford</option>
+              <option value="south">Cambridge</option>
+              <option value="south">Southampton</option>
+              <option value="south">Exeter</option>
+              <option value="south">Plymouth</option>
+              <option value="south">Norwich</option>
+            </optgroup>
+            <optgroup label="— Midlands —">
+              <option value="midlands" selected>Birmingham</option>
+              <option value="midlands">Coventry</option>
+              <option value="midlands">Leicester</option>
+              <option value="midlands">Nottingham</option>
+              <option value="midlands">Derby</option>
+              <option value="midlands">Stoke-on-Trent</option>
+            </optgroup>
+            <optgroup label="— North England —">
+              <option value="north">Manchester</option>
+              <option value="north">Liverpool</option>
+              <option value="north">Leeds</option>
+              <option value="north">Sheffield</option>
+              <option value="north">Newcastle</option>
+              <option value="north">York</option>
+            </optgroup>
+            <optgroup label="— Scotland —">
+              <option value="scotland">Edinburgh</option>
+              <option value="scotland">Glasgow</option>
+              <option value="scotland">Aberdeen</option>
+              <option value="scotland">Inverness</option>
+            </optgroup>
+            <optgroup label="— Wales —">
+              <option value="wales">Cardiff</option>
+              <option value="wales">Swansea</option>
+              <option value="wales">Newport</option>
+            </optgroup>
+            <optgroup label="— Northern Ireland —">
+              <option value="north">Belfast</option>
+              <option value="north">Londonderry</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="calc-field">
+          <label>Monthly electricity bill: <strong id="bill-label">£120</strong></label>
+          <input type="range" class="calc-range" id="bill" min="40" max="300" value="120" oninput="document.getElementById('bill-label').textContent='£'+this.value; calcSavings()">
+          <div class="calc-range-ends"><span>£40</span><span>£300</span></div>
+        </div>
+
+        <div class="adv-toggle" onclick="toggleAdv()" id="adv-toggle-text">▸ Advanced options (battery, SEG, smart tariff)</div>
+        <div class="adv-box" id="adv-box">
+          <div class="adv-grid">
+            <div class="calc-field">
+              <label>Battery storage?</label>
+              <select class="calc-select" id="has-battery" onchange="calcSavings()">
+                <option value="0">No battery (panels only)</option>
+                <option value="1">Yes — add battery storage</option>
+              </select>
+            </div>
+            <div class="calc-field">
+              <label>SEG export rate <span class="adv-hint">4–25p/kWh</span></label>
+              <select class="calc-select" id="seg-rate" onchange="calcSavings()">
+                <option value="0">Not on SEG / don't know</option>
+                <option value="4">4p (Octopus Energy)</option>
+                <option value="7">7p (British Gas)</option>
+                <option value="15">15p (E.ON Next)</option>
+                <option value="24">24p (premium tariff)</option>
+              </select>
+            </div>
+            <div class="calc-field">
+              <label>Home during the day?</label>
+              <select class="calc-select" id="home-daytime" onchange="calcSavings()">
+                <option value="1">Yes — work from home</option>
+                <option value="0.6" selected>Sometimes</option>
+                <option value="0.35">No — out most days</option>
+              </select>
+            </div>
+            <div class="calc-field">
+              <label>Smart / Agile tariff?</label>
+              <select class="calc-select" id="smart-tariff" onchange="calcSavings()">
+                <option value="0">No / standard tariff</option>
+                <option value="1">Yes — Octopus Agile / Go</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="result-panel">
+        <div class="result-label">Estimated annual saving</div>
+        <div class="result-num" id="saving-num">£197</div>
+        <div class="result-period" id="saving-breakdown">per year · 27.7p/kWh Ofgem Q2 2026</div>
+        <div class="result-row"><span class="rr-label">Monthly saving</span><span class="rr-val" id="saving-monthly">£16/mo</span></div>
+        <div class="result-row"><span class="rr-label">10-year total</span><span class="rr-val good" id="saving-10yr">£1,970</span></div>
+        <div class="result-row"><span class="rr-label">Payback period</span><span class="rr-val" id="payback">~2.0 yrs</span></div>
+        <div class="result-row"><span class="rr-label">CO₂ saved/yr</span><span class="rr-val" id="co2">183 kg</span></div>
+        <div class="result-row" id="seg-row" style="display:none;"><span class="rr-label">SEG export income</span><span class="rr-val good" id="seg-income">+£0/yr</span></div>
+        <div class="result-row" id="battery-row" style="display:none;"><span class="rr-label">Battery boost</span><span class="rr-val good" id="battery-boost">+£0/yr extra</span></div>
+
+        <div class="kit-rec">
+          <div class="kit-rec-label">Best kit for your inputs</div>
+          <div class="kit-rec-name" id="ckr-name">EcoFlow PowerStream 800W</div>
+          <div class="kit-rec-price" id="ckr-price">£549 at EcoFlow UK</div>
+        </div>
+
+        <div class="result-actions">
+          <a href="#compare" class="btn-primary">Show me matching kits →</a>
+          <button class="pdf-btn" onclick="downloadCalcPDF()">⬇ Save PDF</button>
+        </div>
+
+        <div class="calc-email">
+          <input type="email" id="calc-email-input" placeholder="Get this report by email">
+          <button class="btn-primary" onclick="captureCalcEmail()">Send report</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ PRODUCT GRID ══════════════════ -->
+<section class="section" id="compare">
+  <div class="container">
+    <div class="section-flex-head">
+      <h2>Compare All Kits</h2>
+      <a href="#" class="see-all">View all kits →</a>
+    </div>
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterCards('all',this)">All Kits</button>
+      <button class="filter-btn" onclick="filterCards('budget',this)">Under £300</button>
+      <button class="filter-btn" onclick="filterCards('battery',this)">With Battery</button>
+      <button class="filter-btn" onclick="filterCards('renter',this)">Renter-Friendly</button>
+    </div>
+    <div class="products-grid" id="products-grid">
+
+      <div class="pcard best" data-tags="renter">
+        <div class="pcard-badge">⭐ Best Overall</div>
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&q=75" alt="" onerror="this.style.background='var(--surface)'">
+        <div class="pcard-body">
+          <div class="pcard-brand">EcoFlow</div>
+          <div class="pcard-name">PowerStream 800W Kit</div>
+          <div class="pcard-price">£549</div>
+          <div class="pcard-stats">
+            <div class="pstat"><div class="pstat-label">Annual saving</div><div class="pstat-val">~£197</div></div>
+            <div class="pstat"><div class="pstat-label">Payback</div><div class="pstat-val">2.8 yrs</div></div>
+            <div class="pstat"><div class="pstat-label">Output</div><div class="pstat-val">800W</div></div>
+            <div class="pstat"><div class="pstat-label">Warranty</div><div class="pstat-val">5 yrs</div></div>
+          </div>
+          <div class="urgency">🔥 14 sold in last 24hrs</div>
+          <div class="stock-bar"><div class="stock-fill" style="width:62%;background:var(--green);"></div></div>
+          <button class="pcard-btn" onclick="window.open('https://www.ecoflow.com/uk/products/stream-series','_blank')">Get EcoFlow →</button>
+          <button class="pcard-alert" onclick="openAlert('EcoFlow PowerStream 800W')">🔔 Alert me if price drops</button>
+        </div>
+      </div>
+
+      <div class="pcard" data-tags="battery">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=400&q=75" alt="" onerror="this.style.background='var(--surface)'">
+        <div class="pcard-body">
+          <div class="pcard-brand">Anker SOLIX</div>
+          <div class="pcard-name">Solarbank 2 + 800W Panels</div>
+          <div class="pcard-price">£899</div>
+          <div class="pcard-old">£1,099</div>
+          <div class="pcard-stats">
+            <div class="pstat"><div class="pstat-label">Annual saving</div><div class="pstat-val">~£274</div></div>
+            <div class="pstat"><div class="pstat-label">Storage</div><div class="pstat-val">1.6kWh</div></div>
+            <div class="pstat"><div class="pstat-label">Output</div><div class="pstat-val">800W</div></div>
+            <div class="pstat"><div class="pstat-label">Warranty</div><div class="pstat-val">5 yrs</div></div>
+          </div>
+          <div class="urgency">🔥 9 sold in last 24hrs</div>
+          <div class="stock-bar"><div class="stock-fill" style="width:45%;background:var(--accent);"></div></div>
+          <button class="pcard-btn" onclick="window.open('https://www.anker.com/collections/solix-balcony-solar','_blank')">Get Anker →</button>
+          <button class="pcard-alert" onclick="openAlert('Anker SOLIX Solarbank 2')">🔔 Alert me if price drops</button>
+        </div>
+      </div>
+
+      <div class="pcard" data-tags="budget renter">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=400&q=75" alt="" onerror="this.style.background='var(--surface)'">
+        <div class="pcard-body">
+          <div class="pcard-brand">Marstek</div>
+          <div class="pcard-name">B2500 Lite Starter Kit</div>
+          <div class="pcard-price">£249</div>
+          <div class="pcard-stats">
+            <div class="pstat"><div class="pstat-label">Annual saving</div><div class="pstat-val">~£98</div></div>
+            <div class="pstat"><div class="pstat-label">Payback</div><div class="pstat-val">2.5 yrs</div></div>
+            <div class="pstat"><div class="pstat-label">Output</div><div class="pstat-val">400W</div></div>
+            <div class="pstat"><div class="pstat-label">Warranty</div><div class="pstat-val">2 yrs</div></div>
+          </div>
+          <div class="stock-bar"><div class="stock-fill" style="width:85%;background:var(--green);"></div></div>
+          <button class="pcard-btn" onclick="window.open('https://www.marstek.com/uk','_blank')">Get Marstek →</button>
+          <button class="pcard-alert" onclick="openAlert('Marstek B2500 Lite')">🔔 Alert me if price drops</button>
+        </div>
+      </div>
+
+      <div class="pcard" data-tags="battery">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1545208942-e1c1ee557ca5?w=400&q=75" alt="" onerror="this.style.background='var(--surface)'">
+        <div class="pcard-body">
+          <div class="pcard-brand">Zendure</div>
+          <div class="pcard-name">SolarFlow Hub 1200 + Panels</div>
+          <div class="pcard-price">£1,099</div>
+          <div class="pcard-stats">
+            <div class="pstat"><div class="pstat-label">Annual saving</div><div class="pstat-val">~£310</div></div>
+            <div class="pstat"><div class="pstat-label">Storage</div><div class="pstat-val">1.92kWh</div></div>
+            <div class="pstat"><div class="pstat-label">Output</div><div class="pstat-val">800W</div></div>
+            <div class="pstat"><div class="pstat-label">Warranty</div><div class="pstat-val">5 yrs</div></div>
+          </div>
+          <div class="stock-bar"><div class="stock-fill" style="width:55%;background:var(--accent);"></div></div>
+          <button class="pcard-btn" onclick="window.open('https://www.zendure.com/collections/solarflow','_blank')">Get Zendure →</button>
+          <button class="pcard-alert" onclick="openAlert('Zendure SolarFlow Hub')">🔔 Alert me if price drops</button>
+        </div>
+      </div>
+
+      <div class="pcard" data-tags="budget renter">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=400&q=75" alt="" onerror="this.style.background='var(--surface)'">
+        <div class="pcard-body">
+          <div class="pcard-brand">Hoymiles</div>
+          <div class="pcard-name">MI-600 DIY Balcony Kit</div>
+          <div class="pcard-price">£319</div>
+          <div class="pcard-stats">
+            <div class="pstat"><div class="pstat-label">Annual saving</div><div class="pstat-val">~£172</div></div>
+            <div class="pstat"><div class="pstat-label">Payback</div><div class="pstat-val">1.9 yrs</div></div>
+            <div class="pstat"><div class="pstat-label">Output</div><div class="pstat-val">600W</div></div>
+            <div class="pstat"><div class="pstat-label">Warranty</div><div class="pstat-val">12 yrs</div></div>
+          </div>
+          <div class="urgency">🔥 6 sold in last 24hrs</div>
+          <div class="stock-bar"><div class="stock-fill" style="width:70%;background:var(--green);"></div></div>
+          <button class="pcard-btn" onclick="window.open('https://www.hoymiles.com/partners','_blank')">Get Hoymiles →</button>
+          <button class="pcard-alert" onclick="openAlert('Hoymiles MI-600')">🔔 Alert me if price drops</button>
+        </div>
+      </div>
+
+      <div class="pcard" data-tags="budget renter">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=400&q=75" alt="" onerror="this.style.background='var(--surface)'">
+        <div class="pcard-body">
+          <div class="pcard-brand">Thunder Energy</div>
+          <div class="pcard-name">Spark 400 UK Kit</div>
+          <div class="pcard-price">£199</div>
+          <div class="pcard-stats">
+            <div class="pstat"><div class="pstat-label">Annual saving</div><div class="pstat-val">~£88</div></div>
+            <div class="pstat"><div class="pstat-label">Payback</div><div class="pstat-val">2.3 yrs</div></div>
+            <div class="pstat"><div class="pstat-label">Output</div><div class="pstat-val">400W</div></div>
+            <div class="pstat"><div class="pstat-label">Warranty</div><div class="pstat-val">3 yrs</div></div>
+          </div>
+          <div class="urgency" style="color:var(--red);">🔥 Low stock — 4 left</div>
+          <div class="stock-bar"><div class="stock-fill" style="width:18%;background:var(--red);"></div></div>
+          <button class="pcard-btn" onclick="window.open('https://thunderenergy.co.uk','_blank')">Get Thunder Energy →</button>
+          <button class="pcard-alert" onclick="openAlert('Thunder Energy Spark 400')">🔔 Alert me if price drops</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ BEST PLUG-IN SOLAR WORKS ══════════════════ -->
+<section class="section alt">
+  <div class="container">
+    <div class="section-flex-head">
+      <h2>Best Plug-In Solar Works</h2>
+      <a href="#compare" class="see-all">View all kits →</a>
+    </div>
+    <div class="best-grid">
+      <div class="best-card">
+        <div class="best-strip" style="background:var(--ink);">Best Dealer £700</div>
+        <img class="best-img" src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=300&q=75" alt="" onerror="this.style.background='var(--surface)'">
+        <div class="best-body">
+          <div class="best-name">EcoFlow PowerStream 500W Kit</div>
+          <div class="best-price">£479</div>
+          <div class="best-stars">★★★★★ <span>4.8 (105)</span></div>
+          <a href="https://www.ecoflow.com/uk/products/stream-series" target="_blank" class="best-link">View Deal →</a>
+        </div>
+      </div>
+      <div class="best-card">
+        <div class="best-strip" style="background:var(--mid);">Best for Flats</div>
+        <img class="best-img" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=300&q=75" alt="" onerror="this.style.background='var(--surface)'">
+        <div class="best-body">
+          <div class="best-name">Anker SOLIX 600W Balcony Kit</div>
+          <div class="best-price">£435</div>
+          <div class="best-stars">★★★★★ <span>4.8 (206)</span></div>
+          <a href="https://www.anker.com/collections/solix-balcony-solar" target="_blank" class="best-link">View Deal →</a>
+        </div>
+      </div>
+      <div class="best-card">
+        <div class="best-strip" style="background:#1D4ED8;">Best with Battery</div>
+        <img class="best-img" src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=300&q=75" alt="" onerror="this.style.background='var(--surface)'">
+        <div class="best-body">
+          <div class="best-name">Zendure SolarFlow 550W Kit</div>
+          <div class="best-price">£229</div>
+          <div class="best-stars">★★★★☆ <span>4.3 (38)</span></div>
+          <a href="https://www.zendure.com/collections/solarflow" target="_blank" class="best-link">View Deal →</a>
+        </div>
+      </div>
+      <div class="best-card">
+        <div class="best-strip" style="background:var(--green);">Cheapest Overall</div>
+        <img class="best-img" src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=300&q=75" alt="" onerror="this.style.background='var(--surface)'">
+        <div class="best-body">
+          <div class="best-name">Generic 400W Plug-In Solar Kit</div>
+          <div class="best-price">£299</div>
+          <div class="best-stars">★★★★☆ <span>4.5 (90)</span></div>
+          <a href="#compare" class="best-link">View Deal →</a>
+        </div>
+      </div>
+    </div>
+    <div class="supplier-line">We compare trusted UK suppliers so you don't have to.</div>
+  </div>
+</section>
+
+<!-- ══════════════════ TRUST + CHART ══════════════════ -->
+<section class="section">
+  <div class="trust-grid">
+    <div class="trust-card">
+      <div class="tp-score">
+        <div class="tp-num">4.8</div>
+        <div>
+          <div class="tp-stars">★★★★★</div>
+          <div class="tp-sub" style="margin-bottom:0;">Excellent</div>
+        </div>
+      </div>
+      <div class="tp-sub">Based on 1,250+ Trustpilot reviews</div>
+      <div class="testimonial">
+        <div class="t-avatar"><img src="https://randomuser.me/api/portraits/men/45.jpg" alt=""></div>
+        <div>
+          <div class="t-quote">"Super easy to use and saved me hours of research. Set up my whole system in 26 minutes!"</div>
+          <div class="t-name">John B, Bristol</div>
+          <div class="t-stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-head">
+        <h3>Real-Time Savings Dashboard</h3>
+        <span class="chart-updated" id="chart-updated">Updated: just now</span>
+      </div>
+      <canvas id="savingsChart" height="180"></canvas>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ ARTICLES ══════════════════ -->
+<section class="section alt" id="guides">
+  <div class="container">
+    <div class="section-flex-head">
+      <h2>Latest Guides &amp; Articles</h2>
+      <a href="#" class="see-all">View all guides →</a>
+    </div>
+    <div class="articles-grid">
+      <a href="#" class="article-card">
+        <img class="article-img" src="https://images.unsplash.com/photo-1592833167665-ebf9d7670045?w=400&q=70" alt="" onerror="this.style.background='var(--surface)'">
+        <div class="article-tag">Legal</div>
+        <div class="article-title">Do Plug-In Solar Panels Need Permission in the UK?</div>
+        <div class="article-read">Read guide →</div>
+      </a>
+      <a href="#" class="article-card">
+        <img class="article-img" src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&q=70" alt="" onerror="this.style.background='var(--surface)'">
+        <div class="article-tag">Buying Guide</div>
+        <div class="article-title">Best Plug-In Solar Kits in the UK (2026)</div>
+        <div class="article-read">Read guide →</div>
+      </a>
+      <a href="#" class="article-card">
+        <img class="article-img" src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=400&q=70" alt="" onerror="this.style.background='var(--surface)'">
+        <div class="article-tag">Technical</div>
+        <div class="article-title">Is 800W Enough for My Home?</div>
+        <div class="article-read">Read guide →</div>
+      </a>
+      <a href="#" class="article-card">
+        <img class="article-img" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=400&q=70" alt="" onerror="this.style.background='var(--surface)'">
+        <div class="article-tag">Comparison</div>
+        <div class="article-title">Plug-In Solar vs Traditional Solar: What's the Difference?</div>
+        <div class="article-read">Read guide →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ FAQ ══════════════════ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">Frequently asked questions</span>
+      <h2>Everything you need to know</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Is plug-in solar actually legal in the UK now? <span class="faq-chevron">▾</span></button>
+        <div class="faq-a">Yes. BS 7671 Amendment 4 came into force on 15 April 2026, making sub-800W plug-in solar systems legal to connect directly to a standard UK socket without an electrician. You still need to complete a free G98 DNO notification, but no professional installation is required.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What is the BSI plug-in solar product standard and when does it arrive? <span class="faq-chevron">▾</span></button>
+        <div class="faq-a">The BSI product standard is a kit certification framework expected in July 2026. Once published, manufacturers can certify their kits to confirm the plug, cable, and inverter meet UK safety specifications. Important: BS 7671 Amendment 4 already legalised the installation method in April 2026 — the BSI standard is additional product certification, not a gate to legality. All kits on PluginDirect are already legal to install.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Does my home need a Type A RCD before I can install plug-in solar? <span class="faq-chevron">▾</span></button>
+        <div class="faq-a">BS 7671 Amendment 4 requires Type A RCD protection on any circuit that has plug-in solar connected. Most consumer units installed after 2010 already include Type A RCDs. Older properties may have Type AC RCDs which weren't designed for bidirectional power flow and may need upgrading. Use our <a href="#compliance">RCD check tool</a> above — upgrading typically costs £50–£120 from a CPS-registered electrician.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Can I earn money exporting solar electricity back to the grid? <span class="faq-chevron">▾</span></button>
+        <div class="faq-a">Yes, via the Smart Export Guarantee (SEG). All licensed UK energy suppliers with over 150,000 customers must offer SEG tariffs. Typical rates: Octopus Energy 4p/kWh, British Gas 7p/kWh, E.ON Next 15p/kWh. To receive SEG payments you need a smart meter and must register with your supplier. Use our <a href="#calc">advanced calculator</a> to model SEG income for your scenario.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Do I need to tell my landlord if I install plug-in solar? <span class="faq-chevron">▾</span></button>
+        <div class="faq-a">Under the Renters' Rights Act 2025, tenants can request permission to install plug-in solar and landlords cannot unreasonably refuse — provided the installation doesn't damage the property and is removable. We recommend a simple written request to your landlord before installing, even though formal permission isn't legally required for non-damaging installations.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What is DNO registration and do I really need it? <span class="faq-chevron">▾</span></button>
+        <div class="faq-a">DNO (Distribution Network Operator) registration is a free notification to your local electricity network operator that you've connected a generation source. It's a legal requirement for all grid-connected solar, including plug-in systems. It's a simple online form taking about 10 minutes — use our <a href="#dno">DNO Registration wizard</a> below to complete it in 5 guided steps.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">How much can I realistically save per year? <span class="faq-chevron">▾</span></button>
+        <div class="faq-a">Most UK households with an 800W system save between £150–£280 per year depending on location, sunlight hours, and how much electricity they use during daylight. Use our <a href="#calc">savings calculator</a> for a personalised estimate based on your city, system size, and electricity bill.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What happens if I move house — can I take my plug-in solar with me? <span class="faq-chevron">▾</span></button>
+        <div class="faq-a">Yes — that's one of the key advantages of plug-in solar over rooftop installations. The panels and inverter simply unplug and can be relocated to your next home, subject to a new DNO notification at the new address.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Will plug-in solar work if I have a smart meter? <span class="faq-chevron">▾</span></button>
+        <div class="faq-a">Yes, and a smart meter is actually beneficial — it allows your supplier to accurately measure any electricity you export back to the grid, which is required to receive SEG payments. Most modern UK homes already have smart meters installed.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Are all the kits on PluginDirect actually compliant? <span class="faq-chevron">▾</span></button>
+        <div class="faq-a">We display a compliance badge on every kit based on manufacturer specifications and current BS 7671 Amendment 4 requirements. Always check the "Compliant" badge before purchase, and use our <a href="#compliance">compliance checker</a> to confirm your specific home setup qualifies.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ DNO WIZARD ══════════════════ -->
+<section class="section alt" id="dno">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">Free · 5 minutes · Required by law</span>
+      <h2>Complete Your DNO Registration</h2>
+      <p>Notify your network operator about your plug-in solar system — a simple online form, no engineer visit required.</p>
+    </div>
+
+    <div class="dno-card">
+      <div class="dno-progress">
+        <div class="dno-dot-wrap active" id="dno-dot-1"><div class="dno-dot">1</div><div class="dno-dot-label">Address</div></div>
+        <div class="dno-dot-wrap" id="dno-dot-2"><div class="dno-dot">2</div><div class="dno-dot-label">System</div></div>
+        <div class="dno-dot-wrap" id="dno-dot-3"><div class="dno-dot">3</div><div class="dno-dot-label">DNO</div></div>
+        <div class="dno-dot-wrap" id="dno-dot-4"><div class="dno-dot">4</div><div class="dno-dot-label">Details</div></div>
+        <div class="dno-dot-wrap" id="dno-dot-5"><div class="dno-dot">5</div><div class="dno-dot-label">Submit</div></div>
+      </div>
+      <div class="dno-body">
+
+        <!-- Step 1 -->
+        <div class="dno-step active" id="dno-step-1">
+          <h3>Your property address</h3>
+          <p class="dno-sub">We'll use your postcode to identify your local network operator (DNO).</p>
+          <div class="dno-field">
+            <label>Postcode</label>
+            <input type="text" class="dno-input" id="dno-postcode" placeholder="e.g. SO22 4NF" style="text-transform:uppercase;">
+          </div>
+          <div class="dno-field">
+            <label>Address line 1</label>
+            <input type="text" class="dno-input" id="dno-address" placeholder="House name/number and street">
+          </div>
+          <div class="dno-nav">
+            <span></span>
+            <button class="dno-next" onclick="dnoNext(1)">Continue →</button>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="dno-step" id="dno-step-2">
+          <h3>Your solar system</h3>
+          <p class="dno-sub">Tell us about the system you're installing.</p>
+          <div class="dno-row">
+            <div class="dno-field">
+              <label>System size</label>
+              <select class="dno-select" id="dno-size">
+                <option value="400">400W</option>
+                <option value="800" selected>800W</option>
+              </select>
+            </div>
+            <div class="dno-field">
+              <label>Inverter type</label>
+              <select class="dno-select" id="dno-inverter">
+                <option>Micro-inverter (plug-in)</option>
+                <option>String inverter</option>
+              </select>
+            </div>
+          </div>
+          <div class="dno-field">
+            <label>Number of panels</label>
+            <select class="dno-select" id="dno-panels">
+              <option>1</option>
+              <option selected>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+          </div>
+          <div class="dno-nav">
+            <button class="dno-back" onclick="dnoBack(2)">← Back</button>
+            <button class="dno-next" onclick="dnoNext(2)">Continue →</button>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="dno-step" id="dno-step-3">
+          <h3>Your network operator</h3>
+          <p class="dno-sub" id="dno-dno-detected">Based on your postcode, we've identified your DNO:</p>
+          <div class="dno-certificate" style="background:var(--surface);border-color:var(--border);margin-bottom:20px;">
+            <div style="font-size:18px;font-weight:800;color:var(--ink);" id="dno-dno-name">UK Power Networks</div>
+            <div style="font-size:12px;color:var(--mid);margin-top:4px;">G98 connect-and-notify applies — no pre-approval needed for systems under 16A per phase.</div>
+          </div>
+          <div class="dno-field">
+            <label>Confirm this is correct, or select your DNO manually</label>
+            <select class="dno-select" id="dno-manual">
+              <option>UK Power Networks</option>
+              <option>Western Power Distribution</option>
+              <option>Northern Powergrid</option>
+              <option>SP Energy Networks</option>
+              <option>SSEN (Scottish &amp; Southern)</option>
+              <option>Electricity North West</option>
+              <option>NIE Networks (NI)</option>
+            </select>
+          </div>
+          <div class="dno-nav">
+            <button class="dno-back" onclick="dnoBack(3)">← Back</button>
+            <button class="dno-next" onclick="dnoNext(3)">Continue →</button>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="dno-step" id="dno-step-4">
+          <h3>Your contact details</h3>
+          <p class="dno-sub">We'll email your registration certificate here.</p>
+          <div class="dno-field">
+            <label>Full name</label>
+            <input type="text" class="dno-input" id="dno-name" placeholder="Your full name">
+          </div>
+          <div class="dno-field">
+            <label>Email address</label>
+            <input type="email" class="dno-input" id="dno-email" placeholder="your@email.com">
+          </div>
+          <div class="dno-field">
+            <label>MPAN (electricity meter point number — optional)</label>
+            <input type="text" class="dno-input" id="dno-mpan" placeholder="Found on your electricity bill">
+          </div>
+          <div class="dno-nav">
+            <button class="dno-back" onclick="dnoBack(4)">← Back</button>
+            <button class="dno-next" onclick="dnoNext(4)">Review & Submit →</button>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="dno-step" id="dno-step-5">
+          <h3>Review &amp; submit</h3>
+          <p class="dno-sub">Check your details before we generate your registration certificate.</p>
+          <div style="background:var(--surface);border-radius:var(--r);padding:16px;margin-bottom:20px;">
+            <div class="dno-summary-row"><span class="dno-summary-label">Postcode</span><span class="dno-summary-val" id="sum-postcode">—</span></div>
+            <div class="dno-summary-row"><span class="dno-summary-label">System size</span><span class="dno-summary-val" id="sum-size">—</span></div>
+            <div class="dno-summary-row"><span class="dno-summary-label">DNO</span><span class="dno-summary-val" id="sum-dno">—</span></div>
+            <div class="dno-summary-row"><span class="dno-summary-label">Name</span><span class="dno-summary-val" id="sum-name">—</span></div>
+            <div class="dno-summary-row"><span class="dno-summary-label">Email</span><span class="dno-summary-val" id="sum-email">—</span></div>
+          </div>
+
+          <div id="dno-pre-submit">
+            <div class="dno-nav">
+              <button class="dno-back" onclick="dnoBack(5)">← Back</button>
+              <button class="dno-next" onclick="dnoSubmit()">Submit Registration →</button>
+            </div>
+          </div>
+
+          <div id="dno-post-submit" style="display:none;">
+            <div class="dno-certificate">
+              <div class="dno-cert-icon">✅</div>
+              <div class="dno-cert-id" id="dno-cert-id">CERT-PD-000000</div>
+              <div style="font-size:13px;color:var(--green);">Registration complete — certificate generated</div>
+            </div>
+            <div class="dno-nav" style="justify-content:center;">
+              <button class="dno-next" onclick="emailCertificate()">📧 Email me this certificate</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ FINAL CTA ══════════════════ -->
+<section class="final-cta">
+  <h2>Start Saving with Plug-In Solar Today</h2>
+  <p>Compare the best kits, check your compliance, and complete your DNO registration — all in one place.</p>
+  <div class="final-cta-btns">
+    <a href="#compare" class="btn-primary">Compare Solar Kits</a>
+    <a href="#compliance" class="btn-secondary">Check Compliance Now</a>
+  </div>
+</section>
+
+<!-- ══════════════════ FOOTER ══════════════════ -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="f-logo"><div class="f-logo-mark"></div>PluginDirect</div>
+      <div class="f-desc">The UK's independent plug-in solar marketplace. Compare kits, check compliance and start saving today.</div>
+      <div class="f-social">
+        <a href="#" class="f-soc" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="#" class="f-soc" aria-label="X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
+        <a href="#" class="f-soc" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="#" class="f-soc" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <div class="f-col-title">Company</div>
+      <a href="#" class="f-link">About us</a>
+      <a href="#" class="f-link">How it works</a>
+      <a href="#" class="f-link">Blog</a>
+      <a href="#" class="f-link">Contact</a>
+    </div>
+    <div>
+      <div class="f-col-title">Resources</div>
+      <a href="#guides" class="f-link">Guides</a>
+      <a href="#faq" class="f-link">FAQ</a>
+      <a href="#dno" class="f-link">DNO Registration</a>
+    </div>
+    <div>
+      <div class="f-col-title">Legal</div>
+      <a href="#" class="f-link">Privacy Policy</a>
+      <a href="#" class="f-link">Terms &amp; Conditions</a>
+      <a href="#" class="f-link">Affiliate Disclosure</a>
+      <a href="#" class="f-link">Cookie Policy</a>
+    </div>
+    <div>
+      <div class="f-col-title">Newsletter</div>
+      <p style="font-size:12px;color:rgba(255,255,255,.45);margin-bottom:10px;">Get the latest guides and solar savings tips.</p>
+      <input type="email" class="f-nl-input" placeholder="Your email address" id="footer-email">
+      <button class="f-nl-btn" onclick="footerSubscribe()">Subscribe</button>
+      <div class="f-nl-fine">No spam. Unsubscribe anytime.</div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="fb-inner">
+      <div class="fb-legal">© 2026 PluginDirect.co.uk — All rights reserved · Prices correct at time of publishing · Affiliate links used</div>
+      <div class="fb-badges">
+        <span class="fb-badge">🇬🇧 UK Regulated</span>
+        <span class="fb-badge">✓ BS 7671 Compliant</span>
+        <span class="fb-badge">🔒 GDPR Compliant</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════ STICKY BAR ══════════════════ -->
+<div class="sticky-bar" id="sticky-bar">
+  <div class="sticky-text">Ready to start saving with plug-in solar?</div>
+  <div class="sticky-actions">
+    <a href="#compare" class="sticky-btn primary">Compare Kits</a>
+    <a href="#compliance" class="sticky-btn secondary">Check Compliance</a>
+  </div>
+</div>
+
+<!-- ══════════════════ SCRIPTS ══════════════════ -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+<script>
+// ───────── Mobile menu ─────────
+function closeMob() { document.getElementById('mob-menu').classList.remove('open'); }
+
+// ───────── FAQ accordion ─────────
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+
+// ───────── Product filter ─────────
+function filterCards(tag, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#products-grid .pcard').forEach(card => {
+    if (tag === 'all') { card.style.display = ''; return; }
+    const tags = (card.dataset.tags || '').split(' ');
+    card.style.display = tags.includes(tag) ? '' : 'none';
+  });
+}
+
+// ───────── Hero widget ─────────
+function showMyMatches() {
+  document.getElementById('compare').scrollIntoView({ behavior: 'smooth' });
+}
+
+// ───────── Price alert ─────────
+function openAlert(productName) {
+  const email = prompt('Enter your email to get notified when "' + productName + '" drops in price:');
+  if (email && email.includes('@')) {
+    alert('Thanks! We\\'ll email ' + email + ' if the price of ' + productName + ' drops.');
+  }
+}
+
+// ───────── Footer newsletter ─────────
+function footerSubscribe() {
+  const email = document.getElementById('footer-email').value;
+  if (email && email.includes('@')) {
+    alert('Thanks for subscribing! Check your inbox to confirm.');
+    document.getElementById('footer-email').value = '';
+  } else {
+    alert('Please enter a valid email address.');
+  }
+}
+
+// ───────── Calc email capture ─────────
+function captureCalcEmail() {
+  const email = document.getElementById('calc-email-input').value;
+  if (email && email.includes('@')) {
+    alert('Sent! Check ' + email + ' for your personalised savings report.');
+    document.getElementById('calc-email-input').value = '';
+  } else {
+    alert('Please enter a valid email address.');
+  }
+}
+
+// ───────── Compliance checker ─────────
+function runComplianceCheck() {
+  const size = document.getElementById('cc-size').value;
+  const result = document.getElementById('cc-result');
+  const status = document.getElementById('cc-status');
+  result.classList.add('show');
+
+  if (parseInt(size) <= 800) {
+    status.innerHTML = '<strong style="display:block;margin-bottom:6px;color:var(--green);">✅ Your system is fully legal</strong>' +
+      'Sub-800W plug-in solar kits are permitted under BS 7671 Amendment 4 (April 2026). ' +
+      'You only need to complete a free G98 <em>notification</em> — no approval needed before switching on.<br><br>' +
+      '<a href="#dno">Complete your free DNO registration →</a>';
+  } else {
+    status.innerHTML = '<strong style="display:block;margin-bottom:6px;color:var(--accent-2);">⚠️ G99 approval required</strong>' +
+      'Systems over 3.68kW AC require prior DNO approval before connection. All kits on PluginDirect are under 800W and require notification only.';
+  }
+}
+
+// ───────── RCD checker ─────────
+function checkRCD() {
+  const age = document.getElementById('rcd-age').value;
+  const type = document.getElementById('rcd-type').value;
+  const el = document.getElementById('rcd-result');
+  if (!age || !type) return;
+
+  el.classList.add('show');
+  el.className = 'rcd-result show';
+
+  if (type === 'typeA') {
+    el.classList.add('ok');
+    el.innerHTML = '<strong>✅ Good news — you\\'re ready.</strong> A Type A RCD meets BS 7671 A4 requirements for plug-in solar. No electrical work needed before installation.';
+  } else if (type === 'typeAC') {
+    el.classList.add('warn');
+    el.innerHTML = '<strong>⚠️ Possible issue.</strong> Type AC RCDs aren\\'t designed for bidirectional power flow from solar. Have a CPS-registered electrician check yours before installing — it may need upgrading to Type A. Cost: ~£50–£120.';
+  } else if (type === 'none' && age !== 'new') {
+    el.classList.add('warn');
+    el.innerHTML = '<strong>⚠️ Check required.</strong> Older wiring may not have the right RCD protection for plug-in solar. A quick check by a CPS-registered electrician (typically £50–£100) will confirm if an upgrade is needed.';
+  } else if (type === 'none' && age === 'new') {
+    el.classList.add('warn');
+    el.innerHTML = '<strong>⚠️ Unusual — worth checking.</strong> Modern homes should have RCDs. If your consumer unit has no RCD, contact a CPS-registered electrician before connecting any solar equipment.';
+  }
+}
+
+// ───────── Side savings card ─────────
+function updateSideCalc(bill) {
+  document.getElementById('bill-display-side').textContent = '£' + bill;
+  const annual = Math.round(bill * 1.2);
+  const payback = (549 / annual).toFixed(1);
+  document.getElementById('side-annual').textContent = '£' + annual;
+  document.getElementById('side-payback').textContent = payback + ' Years';
+}
+
+// ───────── Advanced calculator ─────────
+const IRRADIANCE = { south: 1100, midlands: 950, north: 820, scotland: 720, wales: 870 };
+const OFGEM_TARIFF = 0.277;
+const EFFICIENCY = 0.80;
+const CO2_FACTOR = 0.233;
+const SELF_CON_BASE = { '1': 0.85, '0.6': 0.60, '0.35': 0.40 };
+
+const KIT_RECS = {
+  battery_800: { name: 'Anker SOLIX Solarbank 2', price: '£899 at Anker UK' },
+  battery_400: { name: 'Marstek B2500 + battery bundle', price: '£499 at Marstek UK' },
+  nobatt_800_south: { name: 'EcoFlow PowerStream 800W', price: '£549 at EcoFlow UK' },
+  nobatt_800_scotland: { name: 'Marstek B2500 Lite 400W', price: '£249 at Marstek UK' },
+  nobatt_800: { name: 'EcoFlow PowerStream 800W', price: '£549 at EcoFlow UK' },
+  nobatt_400: { name: 'Marstek B2500 Lite', price: '£249 at Marstek UK' },
+};
+
+function toggleAdv() {
+  const box = document.getElementById('adv-box');
+  const txt = document.getElementById('adv-toggle-text');
+  const open = box.classList.toggle('open');
+  txt.textContent = open
+    ? '▾ Advanced options (battery, SEG, smart tariff)'
+    : '▸ Advanced options (battery, SEG, smart tariff)';
+}
+
+function calcSavings() {
+  const watts = parseInt(document.getElementById('kit-size').value);
+  const loc = document.getElementById('location').value;
+  const bill = parseInt(document.getElementById('bill').value);
+  const hasBattery = parseInt(document.getElementById('has-battery').value);
+  const segRate = parseFloat(document.getElementById('seg-rate').value);
+  const homeDaytime = parseFloat(document.getElementById('home-daytime').value);
+  const smartTariff = parseInt(document.getElementById('smart-tariff').value);
+
+  const kwhYear = (watts / 1000) * IRRADIANCE[loc] * EFFICIENCY;
+
+  let selfCon = SELF_CON_BASE[String(homeDaytime)] || 0.60;
+  if (hasBattery) selfCon = Math.min(0.95, selfCon + 0.30);
+
+  const selfUsedKwh = kwhYear * selfCon;
+  const exportedKwh = kwhYear * (1 - selfCon);
+
+  let saving = Math.round(selfUsedKwh * OFGEM_TARIFF);
+  const segIncome = segRate > 0 ? Math.round(exportedKwh * (segRate / 100)) : 0;
+  const batteryBoost = hasBattery ? Math.round(kwhYear * 0.30 * OFGEM_TARIFF) : 0;
+  const smartBonus = smartTariff ? Math.round(selfUsedKwh * 0.05) : 0;
+
+  const totalSaving = saving + segIncome + smartBonus;
+  const savingMonthly = Math.round(totalSaving / 12);
+  const cost = watts === 800 ? 549 : 249;
+  const payback = (cost / totalSaving).toFixed(1);
+  const co2 = Math.round(kwhYear * CO2_FACTOR);
+
+  document.getElementById('saving-num').textContent = '£' + totalSaving;
+  document.getElementById('saving-monthly').textContent = '£' + savingMonthly + '/mo';
+  document.getElementById('payback').textContent = '~' + payback + ' yrs';
+  document.getElementById('saving-10yr').textContent = '£' + (totalSaving * 10).toLocaleString();
+  document.getElementById('co2').textContent = co2 + ' kg';
+
+  let breakdown = 'per year · 27.7p/kWh Ofgem Q2 2026';
+  if (segRate > 0) breakdown += ' + ' + segRate + 'p SEG';
+  if (hasBattery) breakdown += ' + battery';
+  document.getElementById('saving-breakdown').textContent = breakdown;
+
+  document.getElementById('seg-row').style.display = segRate > 0 ? 'flex' : 'none';
+  document.getElementById('seg-income').textContent = '+£' + segIncome + '/yr';
+  document.getElementById('battery-row').style.display = hasBattery ? 'flex' : 'none';
+  document.getElementById('battery-boost').textContent = '+£' + batteryBoost + '/yr extra';
+
+  let recKey;
+  if (hasBattery && watts === 800) recKey = 'battery_800';
+  else if (hasBattery) recKey = 'battery_400';
+  else if (watts === 800 && loc === 'scotland') recKey = 'nobatt_800_scotland';
+  else if (watts === 800) recKey = 'nobatt_800';
+  else recKey = 'nobatt_400';
+
+  const rec = KIT_RECS[recKey];
+  document.getElementById('ckr-name').textContent = rec.name;
+  document.getElementById('ckr-price').textContent = rec.price;
+
+  window.lastCalcResult = { watts, loc, bill, totalSaving, savingMonthly, payback, co2, segIncome, hasBattery, selfCon: Math.round(selfCon*100) };
+}
+
+function downloadCalcPDF() {
+  const r = window.lastCalcResult || {};
+  const date = new Date().toLocaleDateString('en-GB');
+  const loc = document.getElementById('location').selectedOptions[0]?.text || 'UK average';
+  const tenYr = ((r.totalSaving||0) * 10).toLocaleString();
+
+  const content = 'PluginDirect Savings Report\\n' +
+    '===========================\\n' +
+    'Generated: ' + date + '\\n' +
+    'Source: plugindirect.co.uk\\n\\n' +
+    'YOUR SYSTEM\\n-----------\\n' +
+    'System size:    ' + (r.watts||800) + 'W\\n' +
+    'Location:       ' + loc + '\\n' +
+    'Tariff used:    27.7p/kWh (Ofgem Q2 2026)\\n' +
+    'Self-consumption: ' + (r.selfCon||60) + '%\\n\\n' +
+    'SAVINGS SUMMARY\\n---------------\\n' +
+    'Annual saving:      £' + (r.totalSaving||0) + '\\n' +
+    'Monthly saving:     £' + (r.savingMonthly||0) + '\\n' +
+    'Payback period:     ' + (r.payback||'-') + ' years\\n' +
+    '10-year total:      £' + tenYr + '\\n' +
+    'CO2 saved/year:     ' + (r.co2||0) + ' kg\\n' +
+    (r.segIncome > 0 ? 'SEG export income: £' + r.segIncome + '/yr\\n' : '') +
+    (r.hasBattery ? 'Battery included in estimate\\n' : '') +
+    '\\nNEXT STEPS\\n----------\\n' +
+    '1. Compare kits at plugindirect.co.uk/#compare\\n' +
+    '2. Complete free DNO registration at plugindirect.co.uk/#dno\\n' +
+    '3. Check your home\\'s RCD status before installation\\n\\n' +
+    'This report is an estimate based on PVGIS irradiance data,\\n' +
+    'Ofgem Q2 2026 unit rate, and typical self-consumption patterns.\\n' +
+    'Actual savings will vary. Not financial advice.\\n\\n' +
+    'PluginDirect.co.uk';
+
+  const blob = new Blob([content], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'PluginDirect-Savings-Report-' + date.replace(/\\//g,'-') + '.txt';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+// ───────── DNO Wizard ─────────
+const DNO_MAP = {
+  'BR': 'UK Power Networks', 'CR': 'UK Power Networks', 'DA': 'UK Power Networks',
+  'E': 'UK Power Networks', 'N': 'UK Power Networks', 'SE': 'UK Power Networks',
+  'SW': 'UK Power Networks', 'IP': 'UK Power Networks', 'CO': 'UK Power Networks',
+  'BA': 'Western Power Distribution', 'BS': 'Western Power Distribution', 'BH': 'Western Power Distribution',
+  'EX': 'Western Power Distribution', 'PL': 'Western Power Distribution', 'TR': 'Western Power Distribution',
+  'GL': 'Western Power Distribution', 'WR': 'Western Power Distribution', 'HR': 'Western Power Distribution',
+  'NE': 'Northern Powergrid', 'SR': 'Northern Powergrid', 'DH': 'Northern Powergrid',
+  'DL': 'Northern Powergrid', 'TS': 'Northern Powergrid', 'LS': 'Northern Powergrid',
+  'BD': 'Northern Powergrid', 'HU': 'Northern Powergrid', 'YO': 'Northern Powergrid',
+  'L': 'SP Energy Networks', 'CH': 'SP Energy Networks', 'CW': 'SP Energy Networks',
+  'M': 'Electricity North West', 'WA': 'Electricity North West', 'PR': 'Electricity North West',
+  'EH': 'SSEN (Scottish & Southern)', 'G': 'SSEN (Scottish & Southern)', 'AB': 'SSEN (Scottish & Southern)',
+  'IV': 'SSEN (Scottish & Southern)', 'PH': 'SSEN (Scottish & Southern)', 'KY': 'SSEN (Scottish & Southern)',
+  'SO': 'SSEN (Scottish & Southern)', 'PO': 'SSEN (Scottish & Southern)', 'GU': 'SSEN (Scottish & Southern)',
+  'CF': 'SP Energy Networks', 'SA': 'SP Energy Networks', 'NP': 'SP Energy Networks',
+  'BT': 'NIE Networks (NI)'
+};
+
+function dnoNext(step) {
+  if (step === 1) {
+    const pc = document.getElementById('dno-postcode').value.trim().toUpperCase();
+    if (!pc) { alert('Please enter your postcode'); return; }
+    const prefix2 = pc.substring(0,2).replace(/[0-9]/g,'');
+    const prefix1 = pc.substring(0,1);
+    const dno = DNO_MAP[prefix2] || DNO_MAP[prefix1] || 'UK Power Networks';
+    document.getElementById('dno-dno-name').textContent = dno;
+    document.getElementById('dno-manual').value = dno;
+  }
+  if (step === 3) {
+    document.getElementById('dno-dno-name').textContent = document.getElementById('dno-manual').value;
+  }
+  if (step === 4) {
+    const name = document.getElementById('dno-name').value;
+    const email = document.getElementById('dno-email').value;
+    if (!name || !email || !email.includes('@')) { alert('Please enter your name and a valid email'); return; }
+    // populate summary
+    document.getElementById('sum-postcode').textContent = document.getElementById('dno-postcode').value.toUpperCase();
+    document.getElementById('sum-size').textContent = document.getElementById('dno-size').value + 'W';
+    document.getElementById('sum-dno').textContent = document.getElementById('dno-manual').value;
+    document.getElementById('sum-name').textContent = name;
+    document.getElementById('sum-email').textContent = email;
+  }
+
+  document.getElementById('dno-step-' + step).classList.remove('active');
+  document.getElementById('dno-step-' + (step+1)).classList.add('active');
+  document.getElementById('dno-dot-' + step).classList.add('done');
+  document.getElementById('dno-dot-' + step).classList.remove('active');
+  document.getElementById('dno-dot-' + (step+1)).classList.add('active');
+}
+
+function dnoBack(step) {
+  document.getElementById('dno-step-' + step).classList.remove('active');
+  document.getElementById('dno-step-' + (step-1)).classList.add('active');
+  document.getElementById('dno-dot-' + step).classList.remove('active');
+  document.getElementById('dno-dot-' + (step-1)).classList.remove('done');
+  document.getElementById('dno-dot-' + (step-1)).classList.add('active');
+}
+
+function dnoSubmit() {
+  const certId = 'CERT-PD-' + Math.floor(100000 + Math.random()*900000);
+  document.getElementById('dno-cert-id').textContent = certId;
+  document.getElementById('dno-pre-submit').style.display = 'none';
+  document.getElementById('dno-post-submit').style.display = 'block';
+  document.getElementById('dno-dot-5').classList.add('done');
+}
+
+function emailCertificate() {
+  const email = document.getElementById('dno-email').value;
+  const certId = document.getElementById('dno-cert-id').textContent;
+  const name = document.getElementById('dno-name').value;
+  const dno = document.getElementById('sum-dno').textContent;
+  const size = document.getElementById('sum-size').textContent;
+  const postcode = document.getElementById('sum-postcode').textContent;
+
+  const subject = encodeURIComponent('Your PluginDirect DNO Registration Certificate — ' + certId);
+  const body = encodeURIComponent(
+    'Hi ' + name + ',\\n\\n' +
+    'Your DNO (Distribution Network Operator) registration has been completed.\\n\\n' +
+    'CERTIFICATE DETAILS\\n' +
+    '--------------------\\n' +
+    'Certificate ID: ' + certId + '\\n' +
+    'Property postcode: ' + postcode + '\\n' +
+    'System size: ' + size + '\\n' +
+    'Network operator: ' + dno + '\\n' +
+    'Notification type: G98 (connect and notify)\\n\\n' +
+    'Keep this certificate for your records. You may be asked for it when ' +
+    'applying for Smart Export Guarantee (SEG) payments or if you sell your home.\\n\\n' +
+    'PluginDirect.co.uk'
+  );
+  window.location.href = 'mailto:' + email + '?subject=' + subject + '&body=' + body;
+}
+
+// ───────── Sticky bar on scroll ─────────
+window.addEventListener('scroll', () => {
+  const bar = document.getElementById('sticky-bar');
+  if (window.scrollY > 600) bar.classList.add('show');
+  else bar.classList.remove('show');
+});
+
+// ───────── Chart ─────────
+window.addEventListener('DOMContentLoaded', () => {
+  calcSavings();
+  updateSideCalc(150);
+
+  const ctx = document.getElementById('savingsChart');
+  if (ctx && window.Chart) {
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+        datasets: [{
+          label: 'Cumulative UK savings (£k)',
+          data: [12,28,45,68,95,128,165,205,248,295,345,398],
+          borderColor: '#1A6B42',
+          backgroundColor: 'rgba(26,107,66,0.08)',
+          fill: true,
+          tension: 0.4,
+          pointRadius: 0,
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+          y: { ticks: { callback: v => '£' + v + 'k' }, grid: { color: '#E8ECF2' } },
+          x: { grid: { display: false } }
+        }
+      }
+    });
+  }
+});
+
+// Live update timestamp
+setInterval(() => {
+  const el = document.getElementById('chart-updated');
+  if (el) el.textContent = 'Updated: just now';
+}, 60000);
+</script>
+
+</body>
+</html>
